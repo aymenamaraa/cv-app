@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosque Management System - Interactive Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Tech Harmony -->
+    <!-- Application Structure Plan: The SPA is structured into four thematic, navigable sections: 'Overview,' 'Architecture,' 'Features & UI,' and 'Deployment & Roadmap.' This dashboard-like approach was chosen over a linear document to allow technical and non-technical stakeholders to quickly access the information most relevant to them. The key interaction is a clickable system diagram in the 'Architecture' section, which provides on-demand detail, making the complex technical relationships easy to explore and understand. This structure prioritizes usability and targeted information discovery. -->
+    <!-- Visualization & Content Choices: 
+        - Report Info: Full Technical Plan. -> Goal: Organize & Inform. -> Viz/Method: The plan is broken into logical dashboard sections. A core interactive diagram built with HTML/CSS visualizes the system's components (Frontend, Backend, DB, Services). -> Interaction: Clicking a component in the diagram reveals a modal with detailed information (e.g., database schemas, tech stack specifics). This avoids overwhelming the user with text. -> Justification: This is more engaging than reading a static document and helps in understanding the system's interconnected parts. -> Library/Method: Vanilla JS for interactions, Tailwind CSS for all styling and layout.
+        - Report Info: Database Schemas. -> Goal: Inform. -> Viz/Method: Schemas are presented in styled `div` containers that mimic database tables for clarity. -> Interaction: Displayed within the modal triggered from the architecture diagram. -> Justification: Legible and familiar format for technical users. -> Library/Method: HTML/Tailwind CSS.
+        - Report Info: Deployment Pipeline. -> Goal: Show change/process. -> Viz/Method: A visual flowchart built with HTML/CSS represents the CI/CD steps. -> Interaction: Static visualization for clarity. -> Justification: Clearly communicates the deployment process. -> Library/Method: HTML/Tailwind CSS.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            color: #0f172a; /* slate-900 */
+        }
+        .active-nav {
+            color: #2563eb; /* blue-600 */
+            border-bottom: 2px solid #2563eb;
+        }
+        .nav-link {
+            transition: color 0.2s, border-color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .modal-backdrop {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .modal-content {
+            transition: transform 0.3s ease-in-out;
+        }
+        .schema-table {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+        }
+        .schema-header {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-slate-800">🕌 Mosque Management System</span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#overview" class="nav-link text-gray-600 hover:text-blue-600 font-medium pb-1">Overview</a>
+                    <a href="#architecture" class="nav-link text-gray-600 hover:text-blue-600 font-medium pb-1">Architecture</a>
+                    <a href="#features" class="nav-link text-gray-600 hover:text-blue-600 font-medium pb-1">Features & UI</a>
+                    <a href="#deployment" class="nav-link text-gray-600 hover:text-blue-600 font-medium pb-1">Deployment & Roadmap</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        
+        <!-- Section: Overview -->
+        <section id="overview" class="mb-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold tracking-tight section-title mb-4">Project Overview</h2>
+            <p class="text-lg text-slate-600 mb-8 max-w-3xl">This interactive document outlines the complete technical plan for the Mosque Management System. It's designed to provide a clear, explorable overview of the project's architecture, features, and lifecycle, built on a robust and scalable NestJS backend.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="font-semibold text-slate-800 mb-2">Frontend Applications</h3>
+                    <p class="text-3xl font-bold text-blue-600">2</p>
+                    <p class="text-sm text-slate-500 mt-1">React Native (Mobile) & Next.js (Admin)</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="font-semibold text-slate-800 mb-2">Backend Framework</h3>
+                    <p class="text-3xl font-bold text-blue-600">1</p>
+                    <p class="text-sm text-slate-500 mt-1">NestJS with TypeScript</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="font-semibold text-slate-800 mb-2">Core Database</h3>
+                    <p class="text-3xl font-bold text-blue-600">1</p>
+                    <p class="text-sm text-slate-500 mt-1">MongoDB (NoSQL)</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="font-semibold text-slate-800 mb-2">Key Integrations</h3>
+                    <p class="text-3xl font-bold text-blue-600">4+</p>
+                    <p class="text-sm text-slate-500 mt-1">JWT, S3, FCM, Stripe</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Architecture -->
+        <section id="architecture" class="mb-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold tracking-tight section-title mb-4">System Architecture</h2>
+            <p class="text-lg text-slate-600 mb-8 max-w-3xl">This diagram illustrates the flow of data and services within the system. Click on any component to view its detailed specifications, including technologies and database schemas. This visual approach clarifies the relationships between the frontend clients, the central backend, the database, and external services.</p>
+            
+            <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg border border-slate-200">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 text-center">
+                    <!-- Clients -->
+                    <div class="flex flex-col gap-4">
+                        <div id="reactNative" class="interactive-box bg-blue-100 text-blue-800 p-6 rounded-lg border-2 border-blue-200 cursor-pointer hover:bg-blue-200 transition">
+                            <h4 class="font-bold text-lg">📱 Mobile App</h4>
+                            <p class="text-sm">React Native + Expo</p>
+                        </div>
+                        <div id="nextjs" class="interactive-box bg-blue-100 text-blue-800 p-6 rounded-lg border-2 border-blue-200 cursor-pointer hover:bg-blue-200 transition">
+                            <h4 class="font-bold text-lg">🖥️ Admin Dashboard</h4>
+                            <p class="text-sm">Next.js</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-5xl text-slate-300 font-light mx-4 hidden lg:block">&rarr;</div>
+                    <div class="text-5xl text-slate-300 font-light my-4 lg:hidden">&darr;</div>
+
+                    <!-- Backend -->
+                    <div id="nestjs-backend" class="interactive-box bg-slate-800 text-white p-8 rounded-lg border-2 border-slate-600 cursor-pointer hover:bg-slate-700 transition w-full lg:w-auto">
+                        <h4 class="font-bold text-xl">🚀 NestJS Backend</h4>
+                        <p class="text-sm text-slate-300">REST API with JWT Auth</p>
+                    </div>
+                    
+                    <div class="text-5xl text-slate-300 font-light mx-4 hidden lg:block">&harr;</div>
+                     <div class="text-5xl text-slate-300 font-light my-4 lg:hidden">&darr;</div>
+
+                    <!-- DB & Services -->
+                    <div class="flex flex-col gap-4 w-full lg:w-auto">
+                        <div id="mongodb" class="interactive-box bg-green-100 text-green-800 p-4 rounded-lg border-2 border-green-200 cursor-pointer hover:bg-green-200 transition">
+                            <h4 class="font-bold">🍃 MongoDB</h4>
+                            <p class="text-sm">Database</p>
+                        </div>
+                        <div id="aws-s3" class="interactive-box bg-orange-100 text-orange-800 p-4 rounded-lg border-2 border-orange-200 cursor-pointer hover:bg-orange-200 transition">
+                            <h4 class="font-bold">📦 AWS S3</h4>
+                            <p class="text-sm">File Storage</p>
+                        </div>
+                        <div id="fcm" class="interactive-box bg-red-100 text-red-800 p-4 rounded-lg border-2 border-red-200 cursor-pointer hover:bg-red-200 transition">
+                            <h4 class="font-bold">🔔 FCM</h4>
+                            <p class="text-sm">Push Notifications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Features & UI -->
+        <section id="features" class="mb-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold tracking-tight section-title mb-4">Features & UI Structure</h2>
+             <p class="text-lg text-slate-600 mb-8 max-w-3xl">The application is designed with a clean, user-centric interface. Below are the key screens and their primary functions as defined in the UI/UX plan. This covers both the public-facing mobile app for users and the web-based dashboard for mosque administrators.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">🏠 Home Screen</h3>
+                    <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                        <li>Interactive map view with GPS</li>
+                        <li>Toggle for list view of mosques</li>
+                        <li>Search bar for name or city</li>
+                        <li>Modal for filtering by facilities</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">🕌 Mosque Profile</h3>
+                    <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                        <li>Photo gallery and address</li>
+                        <li>Dynamic prayer times table</li>
+                        <li>Icon-based facility list</li>
+                        <li>Event list and user reviews</li>
+                        <li>"Get Directions" button</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">🗓️ Event Page</h3>
+                    <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                        <li>Full event title and description</li>
+                        <li>Date and time information</li>
+                        <li>Optional RSVP button for users</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">⭐ Review Submission</h3>
+                    <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                        <li>Interactive 1-5 star rating</li>
+                        <li>Text comment box</li>
+                        <li>Clear submission action</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">📊 Admin Dashboard</h3>
+                    <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                        <li>Sidebar navigation layout</li>
+                        <li>CRUD interfaces for all data</li>
+                        <li>Review management and approval</li>
+                        <li>Data summaries and charts</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">🔐 Security & Auth</h3>
+                    <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                        <li>JWT for secure sessions</li>
+                        <li>Role-based access control (RBAC)</li>
+                        <li>Admin approval for mosque claims</li>
+                        <li>Moderation tools for reviews</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Deployment & Roadmap -->
+        <section id="deployment" class="mb-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold tracking-tight section-title mb-4">Deployment & Roadmap</h2>
+            <p class="text-lg text-slate-600 mb-8 max-w-3xl">The project utilizes a modern, automated CI/CD pipeline for reliable deployments. The infrastructure is designed for scalability. The roadmap outlines potential future enhancements to increase platform value and user engagement.</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Deployment -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-4">CI/CD Pipeline</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-slate-200 text-slate-700 h-12 w-12 rounded-full flex items-center justify-center font-bold">1</div>
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200 flex-1">
+                                <h4 class="font-semibold">Test</h4>
+                                <p class="text-sm text-slate-500">Run unit & E2E tests via GitHub Actions</p>
+                            </div>
+                        </div>
+                        <div class="ml-6 text-2xl text-slate-300">&darr;</div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-slate-200 text-slate-700 h-12 w-12 rounded-full flex items-center justify-center font-bold">2</div>
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200 flex-1">
+                                <h4 class="font-semibold">Build</h4>
+                                <p class="text-sm text-slate-500">Create production Docker image for NestJS</p>
+                            </div>
+                        </div>
+                         <div class="ml-6 text-2xl text-slate-300">&darr;</div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-slate-200 text-slate-700 h-12 w-12 rounded-full flex items-center justify-center font-bold">3</div>
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200 flex-1">
+                                <h4 class="font-semibold">Push to Registry</h4>
+                                <p class="text-sm text-slate-500">Upload image to container registry</p>
+                            </div>
+                        </div>
+                         <div class="ml-6 text-2xl text-slate-300">&darr;</div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-slate-200 text-slate-700 h-12 w-12 rounded-full flex items-center justify-center font-bold">4</div>
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200 flex-1">
+                                <h4 class="font-semibold">Deploy</h4>
+                                <p class="text-sm text-slate-500">Trigger service redeploy on Render</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roadmap -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-4">Future Phases</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200">
+                            <h4 class="font-semibold text-blue-700">💳 Online Donations</h4>
+                            <p class="text-sm text-slate-600">Integrate Stripe Connect to allow direct donations to mosques.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200">
+                            <h4 class="font-semibold text-blue-700">🏆 User Badges & Gamification</h4>
+                            <p class="text-sm text-slate-600">Reward active users for contributions like reviews and event RSVPs.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200">
+                            <h4 class="font-semibold text-blue-700">📹 Live Streaming</h4>
+                            <p class="text-sm text-slate-600">Enable mosques to stream Jumu'ah or Taraweeh prayers via Mux or AWS IVS.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-slate-200">
+                            <h4 class="font-semibold text-blue-700">📈 Enhanced Analytics</h4>
+                            <p class="text-sm text-slate-600">Provide admins with insights on review sentiment and facility demand.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div id="modal-backdrop" class="modal-backdrop fixed inset-0 bg-black/50 opacity-0"></div>
+        <div id="modal-content" class="modal-content bg-white w-full max-w-2xl max-h-[90vh] rounded-lg shadow-2xl relative transform scale-95 opacity-0 overflow-y-auto">
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <h3 id="modal-title" class="text-2xl font-bold text-slate-900"></h3>
+                    <button id="modal-close" class="text-slate-500 hover:text-slate-800">&times;</button>
+                </div>
+                <div id="modal-body" class="text-slate-600"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('modal');
+            const modalBackdrop = document.getElementById('modal-backdrop');
+            const modalContent = document.getElementById('modal-content');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            const modalClose = document.getElementById('modal-close');
+
+            const contentData = {
+                'reactNative': {
+                    title: '📱 Mobile App',
+                    body: `
+                        <p class="mb-4">The primary user-facing application built with React Native and Expo for cross-platform compatibility (iOS & Android).</p>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>Framework:</strong> React Native with Expo</li>
+                            <li><strong>Navigation:</strong> react-navigation</li>
+                            <li><strong>Mapping:</strong> react-native-maps</li>
+                            <li><strong>UI Components:</strong> React Native Paper + NativeWind</li>
+                            <li><strong>Backend Communication:</strong> Axios for REST API calls to the NestJS backend</li>
+                        </ul>
+                    `
+                },
+                'nextjs': {
+                    title: '🖥️ Admin Dashboard',
+                    body: `
+                        <p class="mb-4">A web-based dashboard for mosque administrators to manage their content. Built with Next.js for performance and robust routing.</p>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>Framework:</strong> Next.js</li>
+                            <li><strong>UI Components:</strong> Tailwind CSS + Shadcn/ui or Daisy UI</li>
+                            <li><strong>Authentication:</strong> Custom login forms communicating with NestJS JWT endpoints</li>
+                            <li><strong>Data Visualization:</strong> Recharts or Chart.js</li>
+                        </ul>
+                    `
+                },
+                'nestjs-backend': {
+                    title: '🚀 NestJS Backend',
+                    body: `
+                        <p class="mb-4">The central nervous system of the application. A scalable, modular backend built with NestJS.</p>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>Framework:</strong> NestJS</li>
+                            <li><strong>Database:</strong> MongoDB with Mongoose</li>
+                            <li><strong>Authentication:</strong> JWT (JSON Web Tokens) via Passport.js</li>
+                            <li><strong>API Documentation:</strong> Swagger</li>
+                        </ul>
+                    `
+                },
+                'mongodb': {
+                    title: '🍃 MongoDB Database',
+                    body: `
+                        <p class="mb-4">The NoSQL database chosen for its flexibility and scalability. Schemas are defined using Mongoose models in the NestJS backend.</p>
+                        <div class="space-y-4">
+                            ${createSchemaTable('UserSchema', ['name', 'email', 'password (hashed)', 'role', 'claimedMosqueId', 'favorites'])}
+                            ${createSchemaTable('MosqueSchema', ['name', 'address', 'location', 'photos', 'facilities', 'prayerTimes', 'adminId', 'isClaimed'])}
+                            ${createSchemaTable('EventSchema', ['mosqueId', 'title', 'description', 'date', 'rsvps'])}
+                            ${createSchemaTable('ReviewSchema', ['mosqueId', 'userId', 'userName', 'rating', 'comment', 'status'])}
+                        </div>
+                    `
+                },
+                'aws-s3': {
+                    title: '📦 AWS S3 Storage',
+                    body: `
+                        <p class="mb-4">Amazon Simple Storage Service (S3) is used for scalable and reliable storage of user-uploaded media, such as mosque photos.</p>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>Purpose:</strong> Storing images and other static assets.</li>
+                            <li><strong>Integration:</strong> Managed via the NestJS backend to handle secure uploads and serve file URLs.</li>
+                        </ul>
+                    `
+                },
+                'fcm': {
+                    title: '🔔 Firebase Cloud Messaging (FCM)',
+                    body: `
+                        <p class="mb-4">Used to send push notifications to the mobile app for event reminders, prayer time alerts, and announcements.</p>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>Purpose:</strong> Real-time user notifications.</li>
+                            <li><strong>Integration:</strong> The NestJS backend uses a package like \`nestjs-fcm\` to communicate with Firebase servers and dispatch notifications to specific devices.</li>
+                        </ul>
+                    `
+                }
+            };
+
+            function createSchemaTable(name, fields) {
+                const fieldRows = fields.map(field => `<div class="p-3 border-t border-slate-200">${field}</div>`).join('');
+                return `
+                    <div class="schema-table">
+                        <div class="schema-header p-3">${name}</div>
+                        ${fieldRows}
+                    </div>
+                `;
+            }
+
+            function openModal(id) {
+                const data = contentData[id];
+                if (!data) return;
+                
+                modalTitle.textContent = data.title;
+                modalBody.innerHTML = data.body;
+                
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modalBackdrop.classList.remove('opacity-0');
+                    modalContent.classList.remove('opacity-0', 'scale-95');
+                }, 10);
+            }
+
+            function closeModal() {
+                modalBackdrop.classList.add('opacity-0');
+                modalContent.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+
+            document.querySelectorAll('.interactive-box').forEach(box => {
+                box.addEventListener('click', () => openModal(box.id));
+            });
+
+            modalClose.addEventListener('click', closeModal);
+            modalBackdrop.addEventListener('click', closeModal);
+
+            // Navigation highlighting
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 80) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active-nav');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active-nav');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
