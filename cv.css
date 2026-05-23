@@ -430,10 +430,11 @@ body {
     display: grid;
     grid-template-columns: 260px 1fr;
     grid-template-rows: 1fr;
+    align-items: stretch;
     box-shadow: none;
     max-width: 100%;
     width: 100%;
-    height: 277mm;
+    height: 297mm;
     min-height: 0;
     overflow: hidden;
     break-after: page;
@@ -448,15 +449,18 @@ body {
   }
 
   .sidebar {
-    padding: 40px 24px 36px;
-    gap: 28px;
-    height: 100%;
+    padding: 36px 22px 30px;
+    gap: 24px;
+    align-self: stretch;
+    min-height: 0;
     overflow: hidden;
+    height: 100%;
   }
 
   .main {
-    padding: 40px 34px 36px;
-    height: 100%;
+    padding: 34px 30px 28px;
+    align-self: stretch;
+    min-height: 0;
     overflow: hidden;
   }
 
@@ -470,12 +474,71 @@ body {
   }
 
   .profile-text {
-    padding-bottom: 28px;
-    margin-bottom: 28px;
+    font-size: 12.8px;
+    line-height: 1.62;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+  }
+
+  .m-title {
+    font-size: 16px;
+    gap: 10px;
+    margin-bottom: 16px;
   }
 
   .exp-item {
-    margin-bottom: 22px;
+    padding-left: 18px;
+    margin-bottom: 18px;
+  }
+
+  .exp-item::before,
+  .exp-item::after {
+    top: 5px;
+  }
+
+  .exp-item::after {
+    width: 9px;
+    height: 9px;
+  }
+
+  .exp-header {
+    gap: 4px;
+    margin-bottom: 2px;
+  }
+
+  .exp-title {
+    font-size: 14.2px;
+  }
+
+  .exp-period {
+    font-size: 9.8px;
+    padding: 2px 8px;
+  }
+
+  .exp-company {
+    font-size: 11.5px;
+    margin-bottom: 7px;
+  }
+
+  .exp-item ul {
+    padding-left: 14px;
+    margin-bottom: 8px;
+  }
+
+  .exp-item li {
+    font-size: 12px;
+    margin-bottom: 4px;
+    line-height: 1.45;
+  }
+
+  .tags {
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 2px 8px;
   }
 
   .print-btn {
@@ -484,6 +547,6 @@ body {
 
   @page {
     size: A4 portrait;
-    margin: 10mm;
+    /* margin: 10mm; */
   }
 }
