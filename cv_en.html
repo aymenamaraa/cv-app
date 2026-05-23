@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Aymen AMARA — FullStack JS/TS Developer</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --navy: #0b2545;
+        --accent: #1a6fb5;
+        --gold: #c9973a;
+        --green: #0e7a57;
+        --green-bg: #edf8f3;
+        --muted: #5a6a7e;
+        --rule: #d0dcea;
+        --tag-bg: #e8f0fb;
+        --tag-txt: #1a4e8a;
+        --bg: #ffffff;
+        --ink: #0e1b2e;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Outfit', sans-serif;
+        background: #dde6f0;
+        color: var(--ink);
+        line-height: 1.6;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── WRAPPER ─────────────────────────────── */
+      .page {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--bg);
+        box-shadow: 0 20px 60px rgba(11, 37, 69, 0.15);
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        min-height: 1120px;
+      }
+
+      /* ── SIDEBAR ─────────────────────────────── */
+      .sidebar {
+        background: var(--navy);
+        color: #c8d8ec;
+        padding: 48px 28px 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+      }
+
+      .name-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .profile-photo {
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid rgba(255, 255, 255, 0.92);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+      }
+
+      .name-block h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.1;
+        margin-bottom: 10px;
+      }
+
+      .role-badge {
+        display: inline-block;
+        background: var(--gold);
+        color: #fff;
+        font-size: 9.5px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 2px;
+      }
+
+      /* sidebar section title */
+      .s-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border-bottom: 1px solid rgba(201, 151, 58, 0.35);
+        padding-bottom: 7px;
+        margin-bottom: 14px;
+      }
+
+      .contact-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+
+      .contact-list li {
+        font-size: 12.5px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: #b8cfe6;
+      }
+
+      .contact-list li span.icon {
+        width: 20px;
+        text-align: center;
+        font-size: 13px;
+        flex-shrink: 0;
+      }
+
+      /* expertise tags in sidebar */
+      .s-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .s-tag {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: #c8d8ec;
+        font-size: 10.5px;
+        font-weight: 500;
+        padding: 4px 9px;
+        border-radius: 3px;
+      }
+
+      .s-tag.gold {
+        background: rgba(201, 151, 58, 0.18);
+        border-color: rgba(201, 151, 58, 0.4);
+        color: #e5c07b;
+      }
+
+      /* skills grid in sidebar */
+      .skill-group {
+        margin-bottom: 18px;
+      }
+
+      .skill-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .skill-group h4 {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(200, 216, 236, 0.55);
+        margin-bottom: 8px;
+      }
+
+      /* languages */
+      .lang-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12.5px;
+        color: #b8cfe6;
+        margin-bottom: 8px;
+      }
+
+      .lang-row strong {
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      .lang-level {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+
+      /* education in sidebar */
+      .edu-degree {
+        font-size: 13px;
+        font-weight: 600;
+        color: #e2ecf8;
+        margin-bottom: 4px;
+      }
+
+      .edu-sub {
+        font-size: 11.5px;
+        color: #8aaac8;
+      }
+
+      /* ── MAIN ────────────────────────────────── */
+      .main {
+        padding: 48px 44px 48px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      /* profile */
+      .profile-text {
+        font-size: 13.2px;
+        color: #374558;
+        line-height: 1.75;
+        padding-bottom: 34px;
+        border-bottom: 1px solid var(--rule);
+        margin-bottom: 32px;
+      }
+
+      /* section header */
+      .m-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--navy);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .m-title::after {
+        content: '';
+        flex: 1;
+        height: 1.5px;
+        background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+      }
+
+      /* experience item */
+      .exp-item {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 26px;
+      }
+
+      .exp-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 6px;
+        bottom: 0;
+        width: 2px;
+        background: var(--rule);
+        border-radius: 2px;
+      }
+
+      .exp-item::after {
+        content: '';
+        position: absolute;
+        left: -4px;
+        top: 6px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 2px var(--accent);
+      }
+
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 3px;
+      }
+
+      .exp-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+      .exp-period {
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--green);
+        background: var(--green-bg);
+        padding: 3px 9px;
+        border-radius: 20px;
+        white-space: nowrap;
+      }
+
+      .exp-company {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--muted);
+        margin-bottom: 9px;
+      }
+
+      .exp-item ul {
+        padding-left: 16px;
+        margin-bottom: 10px;
+      }
+
+      .exp-item li {
+        font-size: 12.5px;
+        color: #3d4f63;
+        margin-bottom: 5px;
+        line-height: 1.6;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 10px;
+      }
+
+      .tag {
+        background: var(--tag-bg);
+        color: var(--tag-txt);
+        font-size: 10.5px;
+        font-weight: 600;
+        padding: 3px 9px;
+        border-radius: 3px;
+      }
+
+      .tag.green {
+        background: var(--green-bg);
+        color: var(--green);
+      }
+
+      /* exp section spacing */
+      .exp-section {
+        margin-bottom: 0;
+      }
+
+      /* ── PRINT / A4 ──────────────────────────── */
+      .print-btn {
+        text-align: center;
+        margin-top: 32px;
+      }
+
+      .print-btn button {
+        border: none;
+        background: var(--navy);
+        color: #ffffff;
+        padding: 13px 32px;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .print-btn button:hover {
+        background: var(--accent);
+      }
+      .center-text {
+        text-align: center;
+      }
+
+      @media print {
+        * {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        body {
+          background: white;
+          padding: 0;
+          margin: 0;
+        }
+
+        .page {
+          box-shadow: none;
+          max-width: 100%;
+          width: 100%;
+          min-height: auto;
+        }
+
+        .print-btn {
+          display: none;
+        }
+
+        @page {
+          size: A4 portrait;
+          margin: 10mm;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- ══ SIDEBAR ══════════════════════════════ -->
+      <aside class="sidebar">
+        <div class="name-block">
+          <img
+            class="profile-photo"
+            src="circle-profile.png"
+            alt="Portrait of Aymen Amara"
+          />
+          <div class="center-text">
+            <h1>Aymen<br />AMARA</h1>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <div class="s-title">Contact</div>
+          <ul class="contact-list">
+            <li><span class="icon">📧</span> aymenamaraa@gmail.com</li>
+            <li><span class="icon">📱</span> +216 95 360 709</li>
+            <li><span class="icon">📍</span> Tunis, Tunisia</li>
+          </ul>
+        </div>
+
+        <!-- Areas of Expertise -->
+        <div>
+          <div class="s-title">Areas of Expertise</div>
+          <div class="s-tags">
+            <span class="s-tag">FullStack TypeScript</span>
+            <span class="s-tag">React Ecosystem</span>
+            <span class="s-tag">Node.js APIs</span>
+            <span class="s-tag">Micro-Frontend</span>
+            <span class="s-tag gold">AI-Augmented Development</span>
+            <span class="s-tag gold">MCP</span>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div>
+          <div class="s-title">Technical Skills</div>
+
+          <div class="skill-group">
+            <h4>Frontend</h4>
+            <div class="s-tags">
+              <span class="s-tag">React</span>
+              <span class="s-tag">TypeScript</span>
+              <span class="s-tag">Redux Toolkit</span>
+              <span class="s-tag">MUI</span>
+              <span class="s-tag">Ant Design</span>
+              <span class="s-tag">Vite</span>
+              <span class="s-tag">React Native</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Backend &amp; APIs</h4>
+            <div class="s-tags">
+              <span class="s-tag">Node.js</span>
+              <span class="s-tag">Express.js</span>
+              <span class="s-tag">GraphQL</span>
+              <span class="s-tag">REST APIs</span>
+              <span class="s-tag">Authentication</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>AI &amp; Developer Tooling</h4>
+            <div class="s-tags">
+              <span class="s-tag gold">MCP</span>
+              <span class="s-tag gold">GitHub Copilot</span>
+              <span class="s-tag gold">Ollama</span>
+              <span class="s-tag gold">LLMs</span>
+              <span class="s-tag gold">Prompt Engineering</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Architecture &amp; DevOps</h4>
+            <div class="s-tags">
+              <span class="s-tag">Micro-Frontend</span>
+              <span class="s-tag">Azure DevOps</span>
+              <span class="s-tag">CI/CD</span>
+              <span class="s-tag">Git</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <div class="s-title">Education</div>
+          <div class="edu-degree">Master's in Computer Science</div>
+          <div class="edu-sub">Faculty of Sciences of Tunis — 2018</div>
+        </div>
+
+        <!-- Languages -->
+        <div>
+          <div class="s-title">Languages</div>
+          <div class="lang-row">
+            <strong>Arabic</strong>
+            <span class="lang-level">Native</span>
+          </div>
+          <div class="lang-row">
+            <strong>French</strong> <span class="lang-level">Fluent</span>
+          </div>
+          <div class="lang-row">
+            <strong>English</strong> <span class="lang-level">Fluent</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ══ MAIN ═════════════════════════════════ -->
+      <main class="main">
+        <!-- Role -->
+        <div
+          style="
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 10px;
+          "
+        >
+          FullStack JS/TS Developer
+        </div>
+
+        <!-- Profile -->
+        <p class="profile-text">
+          Senior JavaScript/TypeScript FullStack Developer with more than 7
+          years of experience designing scalable web applications, enterprise
+          React platforms, and micro-frontend architectures. Frontend-oriented
+          developer with strong backend expertise in Node.js, APIs, and
+          developer tooling. Daily user of AI-assisted engineering workflows
+          leveraging MCP servers and GitHub Copilot Agent mode to accelerate
+          testing, debugging, code quality, and delivery.
+        </p>
+
+        <!-- Experience -->
+        <div class="m-title">Professional Experience</div>
+
+        <div class="exp-section">
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-title">Senior React TypeScript Developer</div>
+              <div class="exp-period">Apr 2024 — Present</div>
+            </div>
+            <div class="exp-company">Talan Tunisia · Groupe Eiffage</div>
+            <ul>
+              <li>
+                Technical lead and architecture contributor across several
+                workstreams within a micro-frontend monorepo platform.
+              </li>
+              <li>
+                Led the rollout of the Vitest testing infrastructure across
+                micro-frontends with reusable standards and AI-assisted
+                workflows.
+              </li>
+              <li>
+                Developed advanced business modules including data grids,
+                tri-view interfaces, and Gantt planning systems.
+              </li>
+              <li>
+                Conducted code reviews and coached teams on React/TypeScript
+                standards, micro-frontend architecture best practices, and
+                continuous software quality improvement.
+              </li>
+              <li>
+                Created advanced prompts for AI agents and MCP-assisted
+                automated code review pipelines to improve code quality and
+                speed up merge request reviews.
+              </li>
+              <li>
+                Mentored and onboarded new developers by establishing technical
+                guidelines, running mentoring sessions, and accelerating ramp-up
+                across the frontend ecosystem and AI-assisted engineering
+                workflows.
+              </li>
+            </ul>
+            <!-- Mention this experience was in Scrum methodology and involved close collaboration with product owners, designers, and other stakeholders to deliver high-quality features in an iterative manner. -->
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Redux Toolkit</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Vitest</span>
+              <span class="tag">Micro-Frontend</span>
+              <span class="tag green">MCP</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-title">
+                FullStack React - Node.js TS Developer
+              </div>
+              <div class="exp-period">Apr 2022 — Mar 2024</div>
+            </div>
+            <div class="exp-company">
+              Talan Tunisia · BPI France Digital Hub
+            </div>
+            <ul>
+              <li>
+                Developed startup onboarding and data synchronization workflows
+                integrated with Dealroom and Intercom.
+              </li>
+              <li>
+                Implemented full-text indexing and search optimization with
+                Algolia.
+              </li>
+              <li>
+                Improved SEO and frontend performance through Lighthouse
+                optimizations.
+              </li>
+              <li>
+                Developed scalable frontend and backend features with React,
+                Node.js, and GraphQL.
+              </li>
+            </ul>
+            <!-- Mention this experience was in SAFE with a program iteration (PI) of 2 sprints of 2 weeks and 2weeks inspect and adapt an next PI planning involving all the teams and of a train -->
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Algolia</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-title">React Developer</div>
+              <div class="exp-period">Dec 2020 — Mar 2022</div>
+            </div>
+            <div class="exp-company">ANAVA · NJANO Coworking Platform</div>
+            <ul>
+              <li>
+                Developed management interfaces for coworking spaces, bookings,
+                claims, and onboarding systems.
+              </li>
+              <li>
+                Built dashboards and user workflows with React, Redux, and Ant
+                Design.
+              </li>
+              <li>
+                Implemented onboarding experiences and interactive guidance
+                systems for platform users.
+              </li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Redux</span>
+              <span class="tag">Ant Design</span>
+              <span class="tag">Jest</span>
+              <span class="tag">SCRUM</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-title">React Native Developer</div>
+              <div class="exp-period">Feb 2020 — Dec 2020</div>
+            </div>
+            <div class="exp-company">
+              Futura · Monshaat Employee Mobile Application
+            </div>
+            <ul>
+              <li>
+                Developed employee management mobile applications for leave
+                requests, remote work, and internal workflows.
+              </li>
+              <li>
+                Implemented real-time notifications and messaging features with
+                Firebase Cloud Messaging.
+              </li>
+              <li>
+                Created responsive, reusable mobile UI components with React
+                Native and Redux.
+              </li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Redux</span>
+              <span class="tag">Firebase FCM</span>
+              <span class="tag">Mobile Development</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-title">FullStack Web Developer</div>
+              <div class="exp-period">Jun 2018 — Jan 2020</div>
+            </div>
+            <div class="exp-company">IDAF · MKC</div>
+            <ul>
+              <li>
+                Built communication platforms for influencers and training
+                management systems with React and Node.js.
+              </li>
+              <li>
+                Developed digitization platforms and candidate file validation
+                systems for administrative workflows.
+              </li>
+              <li>
+                Implemented backend APIs and database integrations with MongoDB
+                and MySQL.
+              </li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+        <!-- /exp-section -->
+      </main>
+    </div>
+
+    <div class="print-btn">
+      <button onclick="window.print()">Export as PDF</button>
+    </div>
+  </body>
+</html>
