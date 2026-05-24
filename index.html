@@ -1,18 +1,30 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=./dist/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aymen AMARA - CV</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Redirecting to CV</title>
+    <script>
+      window.location.replace('./dist/');
+    </script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        margin: 0;
+        background: #f4f7fb;
+        color: #0b2545;
+      }
+
+      a {
+        color: #1a6fb5;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <p>Redirecting to the resume app... <a href="./dist/">Open it here</a>.</p>
   </body>
 </html>

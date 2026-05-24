@@ -1,0 +1,518 @@
+{
+  "fr": {
+    "ui": {
+      "languageLabel": "Langue",
+      "languageNames": {
+        "fr": "Francais",
+        "en": "English"
+      },
+      "infoButton": "Info",
+      "infoDialogTitle": "Documentation du fichier data.json",
+      "closeInfo": "Fermer",
+      "printButton": "Exporter en PDF",
+      "loading": "Chargement du CV...",
+      "loadErrorTitle": "Impossible de charger data.json",
+      "loadErrorMessage": "Verifiez public/data.json : le fichier doit etre un JSON valide contenant les cles fr et en."
+    },
+    "seo": {
+      "title": "Aymen AMARA - Developpeur FullStack JS/TS"
+    },
+    "person": {
+      "nameLines": ["Aymen", "AMARA"],
+      "role": "Developpeur FullStack JS/TS",
+      "photo": "circle-profile.png",
+      "photoAlt": "Portrait d'Aymen Amara"
+    },
+    "pages": [
+      {
+        "sidebar": [
+          {
+            "type": "identity"
+          },
+          {
+            "type": "contact",
+            "title": "Contact",
+            "items": [
+              {
+                "icon": "email",
+                "label": "Email",
+                "value": "aymenamaraa@gmail.com",
+                "href": "mailto:aymenamaraa@gmail.com"
+              },
+              {
+                "icon": "phone",
+                "label": "Telephone",
+                "value": "+216 95 360 709",
+                "href": "tel:+21695360709"
+              },
+              {
+                "icon": "location",
+                "label": "Localisation",
+                "value": "Tunis, Tunisie"
+              }
+            ]
+          },
+          {
+            "type": "tagList",
+            "title": "Domaines d'Expertise",
+            "items": [
+              { "label": "FullStack TypeScript" },
+              { "label": "Ecosysteme React" },
+              { "label": "APIs Node.js" },
+              { "label": "Micro-Frontend" },
+              { "label": "Developpement Augmente par l'IA", "variant": "gold" },
+              { "label": "MCP", "variant": "gold" }
+            ]
+          },
+          {
+            "type": "skillGroups",
+            "title": "Competences Techniques",
+            "groups": [
+              {
+                "title": "Frontend",
+                "items": [
+                  { "label": "React" },
+                  { "label": "TypeScript" },
+                  { "label": "Redux Toolkit" },
+                  { "label": "MUI" },
+                  { "label": "Ant Design" },
+                  { "label": "Vite" },
+                  { "label": "React Native" }
+                ]
+              },
+              {
+                "title": "Backend & APIs",
+                "items": [
+                  { "label": "Node.js" },
+                  { "label": "Express.js" },
+                  { "label": "GraphQL" },
+                  { "label": "REST APIs" },
+                  { "label": "Authentification" }
+                ]
+              }
+            ]
+          }
+        ],
+        "main": {
+          "role": "Developpeur FullStack JS/TS",
+          "summary": "Developpeur FullStack JavaScript/TypeScript Senior avec plus de 7 ans d'experience dans la conception d'applications web scalables, de plateformes React enterprise et d'architectures micro-frontend. Developpeur oriente frontend avec une solide expertise backend en Node.js, APIs et outillage developpeur. Utilisateur quotidien de workflows d'ingenierie assistes par IA tirant parti des serveurs MCP, du mode Agent GitHub Copilot pour accelerer les tests, le debogage, la qualite du code et la livraison.",
+          "sections": [
+            {
+              "type": "experience",
+              "title": "Experience Professionnelle",
+              "items": [
+                {
+                  "title": "Developpeur Senior React TypeScript",
+                  "period": "Avr 2024 - Present",
+                  "company": "Talan Tunisia - Groupe Eiffage",
+                  "bullets": [
+                    "Referent technique et contributeur architecture sur plusieurs workstreams au sein d'une plateforme monorepo micro-frontend.",
+                    "Pilotage du deploiement de l'infrastructure de tests Vitest sur les micro-frontends avec des standards reutilisables et des workflows assistes par IA.",
+                    "Developpement de modules metier avances incluant des grilles de donnees, des interfaces tri-vue et des systemes de planification Gantt.",
+                    "Conduite des revues de code et accompagnement des equipes sur les standards React/TypeScript, les bonnes pratiques d'architecture micro-frontend et l'amelioration continue de la qualite logicielle.",
+                    "Creation de prompts avances pour agents IA et de pipelines de revue automatises de code assistes par MCP pour ameliorer la qualite du code et accelerer les revues de merge requests.",
+                    "Encadrement et onboarding des nouveaux developpeurs avec mise en place de guidelines techniques, sessions de mentoring et acceleration de la montee en competence sur l'ecosysteme frontend et les workflows engineering assistes par IA.",
+                    "Participation active aux ceremonies Agile/Scrum (daily meetings, refinement, sprint planning, reviews et retrospectives)."
+                  ],
+                  "tags": [
+                    { "label": "React" },
+                    { "label": "TypeScript" },
+                    { "label": "Redux Toolkit" },
+                    { "label": "Node.js" },
+                    { "label": "Vitest" },
+                    { "label": "Azure DevOps" },
+                    { "label": "GitLab" },
+                    { "label": "Micro-Frontend" },
+                    { "label": "Agile SCRUM" },
+                    { "label": "MCP", "variant": "green" }
+                  ]
+                },
+                {
+                  "title": "Developpeur FullStack React - Node.js TS",
+                  "period": "Avr 2022 - Mar 2024",
+                  "company": "Talan Tunisia - BPI France Digital Hub",
+                  "bullets": [
+                    "Developpement de workflows d'onboarding de startups et de synchronisation de donnees integres a Dealroom et Intercom.",
+                    "Implementation de l'indexation full-text et optimisation de la recherche avec Algolia.",
+                    "Amelioration du SEO et des performances frontend grace a des optimisations Lighthouse.",
+                    "Developpement de fonctionnalites frontend et backend scalables avec React, Node.js et GraphQL.",
+                    "Collaboration au sein d'equipes organisees selon le framework SAFe avec participation aux PI Planning, synchronisations inter-equipes et cycles de livraison Agile a grande echelle."
+                  ],
+                  "tags": [
+                    { "label": "React" },
+                    { "label": "TypeScript" },
+                    { "label": "Node.js" },
+                    { "label": "GraphQL" },
+                    { "label": "PostgreSQL" },
+                    { "label": "Algolia" },
+                    { "label": "GitLab" },
+                    { "label": "JIRA" },
+                    { "label": "SAFe" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "sidebar": [
+          {
+            "type": "skillGroups",
+            "title": "Competences Techniques",
+            "groups": [
+              {
+                "title": "IA & Outillage Developpeur",
+                "items": [
+                  { "label": "MCP", "variant": "gold" },
+                  { "label": "GitHub Copilot", "variant": "gold" },
+                  { "label": "Ollama", "variant": "gold" },
+                  { "label": "LLMs", "variant": "gold" },
+                  { "label": "Prompt Engineering", "variant": "gold" }
+                ]
+              },
+              {
+                "title": "Architecture & DevOps",
+                "items": [
+                  { "label": "Micro-Frontend" },
+                  { "label": "Azure DevOps" },
+                  { "label": "CI/CD" },
+                  { "label": "Git" }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "education",
+            "title": "Formation",
+            "degree": "Master en Informatique",
+            "details": "Faculte des Sciences de Tunis - 2018"
+          },
+          {
+            "type": "languages",
+            "title": "Langues",
+            "items": [
+              { "name": "Arabe", "level": "Langue maternelle" },
+              { "name": "Francais", "level": "Courant" },
+              { "name": "Anglais", "level": "Courant" }
+            ]
+          }
+        ],
+        "main": {
+          "sections": [
+            {
+              "type": "experience",
+              "title": "Experience Professionnelle",
+              "items": [
+                {
+                  "title": "Developpeur React",
+                  "period": "Dec 2020 - Mar 2022",
+                  "company": "ANAVA - Plateforme de Coworking NJANO",
+                  "bullets": [
+                    "Developpement d'interfaces de gestion pour espaces de coworking, reservations, reclamations et systemes d'onboarding.",
+                    "Creation de tableaux de bord et de workflows utilisateurs avec React, Redux et Ant Design.",
+                    "Implementation d'experiences d'onboarding et de systemes de guidage interactif pour les utilisateurs de la plateforme."
+                  ],
+                  "tags": [
+                    { "label": "React" },
+                    { "label": "Redux" },
+                    { "label": "Ant Design" },
+                    { "label": "Jest" },
+                    { "label": "SCRUM" }
+                  ]
+                },
+                {
+                  "title": "Developpeur React Native",
+                  "period": "Fev 2020 - Dec 2020",
+                  "company": "Futura - Application Mobile Employes Monshaat",
+                  "bullets": [
+                    "Developpement d'applications mobiles de gestion des employes pour les demandes de conges, le teletravail et les workflows internes.",
+                    "Implementation de notifications en temps reel et de fonctionnalites de messagerie avec Firebase Cloud Messaging.",
+                    "Creation de composants UI mobiles responsifs et reutilisables avec React Native et Redux."
+                  ],
+                  "tags": [
+                    { "label": "React Native" },
+                    { "label": "Redux" },
+                    { "label": "Firebase FCM" },
+                    { "label": "Developpement Mobile" }
+                  ]
+                },
+                {
+                  "title": "Developpeur Web FullStack",
+                  "period": "Juin 2018 - Jan 2020",
+                  "company": "IDAF - MKC",
+                  "bullets": [
+                    "Creation de plateformes de communication pour influenceurs et de systemes de gestion de formations avec React et Node.js.",
+                    "Developpement de plateformes de dematerialisation et de validation de dossiers candidats pour des workflows administratifs.",
+                    "Implementation d'APIs backend et d'integrations de bases de donnees avec MongoDB et MySQL."
+                  ],
+                  "tags": [
+                    { "label": "React" },
+                    { "label": "Node.js" },
+                    { "label": "MongoDB" },
+                    { "label": "MySQL" },
+                    { "label": "Bootstrap" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "en": {
+    "ui": {
+      "languageLabel": "Language",
+      "languageNames": {
+        "fr": "Francais",
+        "en": "English"
+      },
+      "infoButton": "Info",
+      "infoDialogTitle": "data.json documentation",
+      "closeInfo": "Close",
+      "printButton": "Export as PDF",
+      "loading": "Loading resume content...",
+      "loadErrorTitle": "Unable to load data.json",
+      "loadErrorMessage": "Check public/data.json: the file must be valid JSON with fr and en keys."
+    },
+    "seo": {
+      "title": "Aymen AMARA - FullStack JS/TS Developer"
+    },
+    "person": {
+      "nameLines": ["Aymen", "AMARA"],
+      "role": "FullStack JS/TS Developer",
+      "photo": "circle-profile.png",
+      "photoAlt": "Portrait of Aymen Amara"
+    },
+    "pages": [
+      {
+        "sidebar": [
+          {
+            "type": "identity"
+          },
+          {
+            "type": "contact",
+            "title": "Contact",
+            "items": [
+              {
+                "icon": "email",
+                "label": "Email",
+                "value": "aymenamaraa@gmail.com",
+                "href": "mailto:aymenamaraa@gmail.com"
+              },
+              {
+                "icon": "phone",
+                "label": "Phone",
+                "value": "+216 95 360 709",
+                "href": "tel:+21695360709"
+              },
+              {
+                "icon": "location",
+                "label": "Location",
+                "value": "Tunis, Tunisia"
+              }
+            ]
+          },
+          {
+            "type": "tagList",
+            "title": "Areas of Expertise",
+            "items": [
+              { "label": "FullStack TypeScript" },
+              { "label": "React Ecosystem" },
+              { "label": "Node.js APIs" },
+              { "label": "Micro-Frontend" },
+              { "label": "AI-Augmented Development", "variant": "gold" },
+              { "label": "MCP", "variant": "gold" }
+            ]
+          },
+          {
+            "type": "skillGroups",
+            "title": "Technical Skills",
+            "groups": [
+              {
+                "title": "Frontend",
+                "items": [
+                  { "label": "React" },
+                  { "label": "TypeScript" },
+                  { "label": "Redux Toolkit" },
+                  { "label": "MUI" },
+                  { "label": "Ant Design" },
+                  { "label": "Vite" },
+                  { "label": "React Native" }
+                ]
+              },
+              {
+                "title": "Backend & APIs",
+                "items": [
+                  { "label": "Node.js" },
+                  { "label": "Express.js" },
+                  { "label": "GraphQL" },
+                  { "label": "REST APIs" },
+                  { "label": "Authentication" }
+                ]
+              }
+            ]
+          }
+        ],
+        "main": {
+          "role": "FullStack JS/TS Developer",
+          "summary": "Senior JavaScript/TypeScript FullStack Developer with more than 7 years of experience designing scalable web applications, enterprise React platforms, and micro-frontend architectures. Frontend-oriented developer with strong backend expertise in Node.js, APIs, and developer tooling. Daily user of AI-assisted engineering workflows leveraging MCP servers and GitHub Copilot Agent mode to accelerate testing, debugging, code quality, and delivery.",
+          "sections": [
+            {
+              "type": "experience",
+              "title": "Professional Experience",
+              "items": [
+                {
+                  "title": "Senior React TypeScript Developer",
+                  "period": "Apr 2024 - Present",
+                  "company": "Talan Tunisia - Groupe Eiffage",
+                  "bullets": [
+                    "Technical lead and architecture contributor across several workstreams within a micro-frontend monorepo platform.",
+                    "Led the rollout of the Vitest testing infrastructure across micro-frontends with reusable standards and AI-assisted workflows.",
+                    "Developed advanced business modules including data grids, tri-view interfaces, and Gantt planning systems.",
+                    "Conducted code reviews and coached teams on React/TypeScript standards, micro-frontend architecture best practices, and continuous software quality improvement.",
+                    "Created advanced prompts for AI agents and MCP-assisted automated code review pipelines to improve code quality and speed up merge request reviews.",
+                    "Mentored and onboarded new developers by establishing technical guidelines, running mentoring sessions, and accelerating ramp-up across the frontend ecosystem and AI-assisted engineering workflows."
+                  ],
+                  "tags": [
+                    { "label": "React" },
+                    { "label": "TypeScript" },
+                    { "label": "Redux Toolkit" },
+                    { "label": "Node.js" },
+                    { "label": "Vitest" },
+                    { "label": "Micro-Frontend" },
+                    { "label": "MCP", "variant": "green" }
+                  ]
+                },
+                {
+                  "title": "FullStack React - Node.js TS Developer",
+                  "period": "Apr 2022 - Mar 2024",
+                  "company": "Talan Tunisia - BPI France Digital Hub",
+                  "bullets": [
+                    "Developed startup onboarding and data synchronization workflows integrated with Dealroom and Intercom.",
+                    "Implemented full-text indexing and search optimization with Algolia.",
+                    "Improved SEO and frontend performance through Lighthouse optimizations.",
+                    "Developed scalable frontend and backend features with React, Node.js, and GraphQL."
+                  ],
+                  "tags": [
+                    { "label": "React" },
+                    { "label": "TypeScript" },
+                    { "label": "Node.js" },
+                    { "label": "GraphQL" },
+                    { "label": "PostgreSQL" },
+                    { "label": "Algolia" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "sidebar": [
+          {
+            "type": "skillGroups",
+            "title": "Technical Skills",
+            "groups": [
+              {
+                "title": "AI & Developer Tooling",
+                "items": [
+                  { "label": "MCP", "variant": "gold" },
+                  { "label": "GitHub Copilot", "variant": "gold" },
+                  { "label": "Ollama", "variant": "gold" },
+                  { "label": "LLMs", "variant": "gold" },
+                  { "label": "Prompt Engineering", "variant": "gold" }
+                ]
+              },
+              {
+                "title": "Architecture & DevOps",
+                "items": [
+                  { "label": "Micro-Frontend" },
+                  { "label": "Azure DevOps" },
+                  { "label": "CI/CD" },
+                  { "label": "Git" }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "education",
+            "title": "Education",
+            "degree": "Master's in Computer Science",
+            "details": "Faculty of Sciences of Tunis - 2018"
+          },
+          {
+            "type": "languages",
+            "title": "Languages",
+            "items": [
+              { "name": "Arabic", "level": "Native" },
+              { "name": "French", "level": "Fluent" },
+              { "name": "English", "level": "Fluent" }
+            ]
+          }
+        ],
+        "main": {
+          "sections": [
+            {
+              "type": "experience",
+              "title": "Professional Experience",
+              "items": [
+                {
+                  "title": "React Developer",
+                  "period": "Dec 2020 - Mar 2022",
+                  "company": "ANAVA - NJANO Coworking Platform",
+                  "bullets": [
+                    "Developed management interfaces for coworking spaces, bookings, claims, and onboarding systems.",
+                    "Built dashboards and user workflows with React, Redux, and Ant Design.",
+                    "Implemented onboarding experiences and interactive guidance systems for platform users."
+                  ],
+                  "tags": [
+                    { "label": "React" },
+                    { "label": "Redux" },
+                    { "label": "Ant Design" },
+                    { "label": "Jest" },
+                    { "label": "SCRUM" }
+                  ]
+                },
+                {
+                  "title": "React Native Developer",
+                  "period": "Feb 2020 - Dec 2020",
+                  "company": "Futura - Monshaat Employee Mobile Application",
+                  "bullets": [
+                    "Developed employee management mobile applications for leave requests, remote work, and internal workflows.",
+                    "Implemented real-time notifications and messaging features with Firebase Cloud Messaging.",
+                    "Created responsive, reusable mobile UI components with React Native and Redux."
+                  ],
+                  "tags": [
+                    { "label": "React Native" },
+                    { "label": "Redux" },
+                    { "label": "Firebase FCM" },
+                    { "label": "Mobile Development" }
+                  ]
+                },
+                {
+                  "title": "FullStack Web Developer",
+                  "period": "Jun 2018 - Jan 2020",
+                  "company": "IDAF - MKC",
+                  "bullets": [
+                    "Built communication platforms for influencers and training management systems with React and Node.js.",
+                    "Developed digitization platforms and candidate file validation systems for administrative workflows.",
+                    "Implemented backend APIs and database integrations with MongoDB and MySQL."
+                  ],
+                  "tags": [
+                    { "label": "React" },
+                    { "label": "Node.js" },
+                    { "label": "MongoDB" },
+                    { "label": "MySQL" },
+                    { "label": "Bootstrap" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

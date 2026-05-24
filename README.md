@@ -1,6 +1,6 @@
 # aymenamaraa.github.io
 
-React CV application powered by Vite. The visible CV content is loaded from `public/data.json`, so the French and English versions can be updated from one structured file.
+React CV application powered by Vite. The editable source lives in `app/`, and the visible CV content is loaded from `public/data.json` so the French and English versions can be updated from one structured file.
 
 ## Local development
 
@@ -32,16 +32,19 @@ npm run preview
 
 ```text
 .
+├── app/
+│   ├── index.html
+│   └── src/
+│       ├── App.jsx
+│       ├── main.jsx
+│       └── styles.css
 ├── .github/workflows/deploy.yml
+├── dist/
 ├── index.html
 ├── package.json
 ├── public/
 │   ├── circle-profile.png
 │   └── data.json
-├── src/
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── styles.css
 └── vite.config.js
 ```
 
@@ -200,6 +203,8 @@ Experience item attributes:
 
 This repository includes `.github/workflows/deploy.yml`, which builds the Vite app and deploys the `dist/` folder through GitHub Actions.
 
+The repository root also contains a lightweight redirect to `./dist/`. That fallback is intentional: it keeps the site working even while the repository is still configured to publish directly from the branch instead of the GitHub Actions artifact.
+
 One-time GitHub setup:
 
 1. Open the repository on GitHub.
@@ -214,6 +219,8 @@ Deploy flow:
 3. GitHub Actions runs `npm ci` and `npm run build`.
 4. The generated `dist/` folder is published to GitHub Pages.
 5. For this user site repository, the public URL is usually `https://aymenamaraa.github.io/`.
+
+If the repository is still using branch-based Pages, commit the regenerated `dist/` folder along with your source changes so the live site stays in sync.
 
 Manual verification before pushing:
 
