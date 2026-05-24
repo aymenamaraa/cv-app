@@ -373,7 +373,8 @@
                     "Developed advanced business modules including data grids, tri-view interfaces, and Gantt planning systems.",
                     "Conducted code reviews and coached teams on React/TypeScript standards, micro-frontend architecture best practices, and continuous software quality improvement.",
                     "Created advanced prompts for AI agents and MCP-assisted automated code review pipelines to improve code quality and speed up merge request reviews.",
-                    "Mentored and onboarded new developers by establishing technical guidelines, running mentoring sessions, and accelerating ramp-up across the frontend ecosystem and AI-assisted engineering workflows."
+                    "Mentored and onboarded new developers by establishing technical guidelines, running mentoring sessions, and accelerating ramp-up across the frontend ecosystem and AI-assisted engineering workflows.",
+                    "Actively participated in Agile/Scrum ceremonies including daily meetings, refinement sessions, sprint planning, reviews, and retrospectives."
                   ],
                   "tags": [
                     { "label": "React" },
@@ -381,7 +382,10 @@
                     { "label": "Redux Toolkit" },
                     { "label": "Node.js" },
                     { "label": "Vitest" },
+                    { "label": "Azure DevOps" },
+                    { "label": "GitLab" },
                     { "label": "Micro-Frontend" },
+                    { "label": "Agile SCRUM" },
                     { "label": "MCP", "variant": "green" }
                   ]
                 },
@@ -393,7 +397,8 @@
                     "Developed startup onboarding and data synchronization workflows integrated with Dealroom and Intercom.",
                     "Implemented full-text indexing and search optimization with Algolia.",
                     "Improved SEO and frontend performance through Lighthouse optimizations.",
-                    "Developed scalable frontend and backend features with React, Node.js, and GraphQL."
+                    "Developed scalable frontend and backend features with React, Node.js, and GraphQL.",
+                    "Collaborated within SAFe-organized teams, contributing to PI Planning, cross-team synchronization, and large-scale Agile delivery cycles."
                   ],
                   "tags": [
                     { "label": "React" },
@@ -401,7 +406,10 @@
                     { "label": "Node.js" },
                     { "label": "GraphQL" },
                     { "label": "PostgreSQL" },
-                    { "label": "Algolia" }
+                    { "label": "Algolia" },
+                    { "label": "GitLab" },
+                    { "label": "JIRA" },
+                    { "label": "SAFe" }
                   ]
                 }
               ]
