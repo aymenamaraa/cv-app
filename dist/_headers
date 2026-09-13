@@ -1,0 +1,23 @@
+# Global security headers for all routes
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Immutable caching for hashed Vite production assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Freshness validation for CV data so content edits apply instantly
+/data.json
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: application/json; charset=utf-8
+
+# Images caching with stale-while-revalidate
+/*.png
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# HTML entry point - always revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate

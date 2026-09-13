@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "validate:data": "node scripts/validate-data.js",
+    "build": "node scripts/validate-data.js && vite build",
+    "deploy:pages": "npx wrangler pages deploy dist --project-name=cv-app",
     "preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {
