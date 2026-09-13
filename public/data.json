@@ -3,524 +3,538 @@
     "ui": {
       "languageLabel": "Langue",
       "languageNames": {
-        "fr": "Francais",
+        "fr": "Français",
         "en": "English"
       },
+      "europassTitle": "Curriculum Vitae Europass",
       "infoButton": "Info",
-      "infoDialogTitle": "Documentation du fichier data.json",
+      "infoDialogTitle": "Documentation du format Europass (data.json)",
       "closeInfo": "Fermer",
-      "printButton": "Exporter en PDF",
-      "loading": "Chargement du CV...",
+      "printButton": "Télécharger en PDF / Imprimer",
+      "loading": "Chargement du CV Europass...",
       "loadErrorTitle": "Impossible de charger data.json",
-      "loadErrorMessage": "Verifiez public/data.json : le fichier doit etre un JSON valide contenant les cles fr et en."
+      "loadErrorMessage": "Vérifiez public/data.json : le fichier doit être un JSON valide contenant les clés fr et en.",
+      "summaryTitle": "Profil Professionnel",
+      "expertiseTitle": "Domaines d'Expertise",
+      "digitalSkillsTitle": "Compétences Numériques",
+      "experienceTitle": "Expérience Professionnelle",
+      "educationTitle": "Éducation et Formation",
+      "languagesTitle": "Compétences Linguistiques",
+      "motherTongueLabel": "Langue maternelle",
+      "otherLanguagesLabel": "Autre(s) langue(s)",
+      "cefrGridTitle": "Auto-évaluation des compétences linguistiques (CECR)",
+      "cefrHeaders": {
+        "understanding": "Comprendre",
+        "listening": "Écouter",
+        "reading": "Lire",
+        "speaking": "Parler",
+        "interaction": "Interaction",
+        "production": "Production",
+        "writing": "Écrire"
+      },
+      "cefrScale": "Niveaux : A1 et A2 : utilisateur élémentaire — B1 et B2 : utilisateur indépendant — C1 et C2 : utilisateur expérimenté"
     },
     "seo": {
-      "title": "Aymen AMARA - Developpeur FullStack JS/TS"
+      "title": "Aymen AMARA - Curriculum Vitae Europass"
     },
     "person": {
+      "firstName": "Aymen",
+      "lastName": "AMARA",
       "nameLines": ["Aymen", "AMARA"],
-      "role": "Developpeur FullStack JS/TS",
-      "photo": "circle-profile.png",
-      "photoAlt": "Portrait d'Aymen Amara"
+      "role": "Développeur FullStack JS/TS",
+      "photo": "profile-portrait.png",
+      "photoAlt": "Portrait d'Aymen Amara",
+      "nationality": "Tunisienne"
     },
-    "pages": [
+    "contact": [
       {
-        "sidebar": [
-          {
-            "type": "identity"
-          },
-          {
-            "type": "contact",
-            "title": "Contact",
-            "items": [
-              {
-                "icon": "email",
-                "label": "Email",
-                "value": "aymenamaraa@gmail.com",
-                "href": "mailto:aymenamaraa@gmail.com"
-              },
-              {
-                "icon": "phone",
-                "label": "Telephone",
-                "value": "+216 95 360 709",
-                "href": "tel:+21695360709"
-              },
-              {
-                "icon": "location",
-                "label": "Localisation",
-                "value": "Tunis, Tunisie"
-              }
-            ]
-          },
-          {
-            "type": "tagList",
-            "title": "Domaines d'Expertise",
-            "items": [
-              { "label": "FullStack TypeScript" },
-              { "label": "Ecosysteme React" },
-              { "label": "APIs Node.js" },
-              { "label": "Micro-Frontend" },
-              { "label": "Developpement Augmente par l'IA", "variant": "gold" },
-              { "label": "MCP", "variant": "gold" }
-            ]
-          },
-          {
-            "type": "skillGroups",
-            "title": "Competences Techniques",
-            "groups": [
-              {
-                "title": "Frontend",
-                "items": [
-                  { "label": "React" },
-                  { "label": "TypeScript" },
-                  { "label": "Redux Toolkit" },
-                  { "label": "MUI" },
-                  { "label": "Ant Design" },
-                  { "label": "Vite" },
-                  { "label": "React Native" }
-                ]
-              },
-              {
-                "title": "Backend & APIs",
-                "items": [
-                  { "label": "Node.js" },
-                  { "label": "Express.js" },
-                  { "label": "GraphQL" },
-                  { "label": "REST APIs" },
-                  { "label": "Authentification" }
-                ]
-              }
-            ]
-          }
-        ],
-        "main": {
-          "role": "Developpeur FullStack JS/TS",
-          "summary": "Developpeur FullStack JavaScript/TypeScript Senior avec plus de 7 ans d'experience dans la conception d'applications web scalables, de plateformes React enterprise et d'architectures micro-frontend. Developpeur oriente frontend avec une solide expertise backend en Node.js, APIs et outillage developpeur. Utilisateur quotidien de workflows d'ingenierie assistes par IA tirant parti des serveurs MCP, du mode Agent GitHub Copilot pour accelerer les tests, le debogage, la qualite du code et la livraison.",
-          "sections": [
-            {
-              "type": "experience",
-              "title": "Experience Professionnelle",
-              "items": [
-                {
-                  "title": "Developpeur Senior React TypeScript",
-                  "period": "Avr 2024 - Present",
-                  "company": "Talan Tunisia - Groupe Eiffage",
-                  "bullets": [
-                    "Referent technique et contributeur architecture sur plusieurs workstreams au sein d'une plateforme monorepo micro-frontend.",
-                    "Pilotage du deploiement de l'infrastructure de tests Vitest sur les micro-frontends avec des standards reutilisables et des workflows assistes par IA.",
-                    "Developpement de modules metier avances incluant des grilles de donnees, des interfaces tri-vue et des systemes de planification Gantt.",
-                    "Conduite des revues de code et accompagnement des equipes sur les standards React/TypeScript, les bonnes pratiques d'architecture micro-frontend et l'amelioration continue de la qualite logicielle.",
-                    "Creation de prompts avances pour agents IA et de pipelines de revue automatises de code assistes par MCP pour ameliorer la qualite du code et accelerer les revues de merge requests.",
-                    "Encadrement et onboarding des nouveaux developpeurs avec mise en place de guidelines techniques, sessions de mentoring et acceleration de la montee en competence sur l'ecosysteme frontend et les workflows engineering assistes par IA.",
-                    "Participation active aux ceremonies Agile/Scrum (daily meetings, refinement, sprint planning, reviews et retrospectives)."
-                  ],
-                  "tags": [
-                    { "label": "React" },
-                    { "label": "TypeScript" },
-                    { "label": "Redux Toolkit" },
-                    { "label": "Node.js" },
-                    { "label": "Vitest" },
-                    { "label": "Azure DevOps" },
-                    { "label": "GitLab" },
-                    { "label": "Micro-Frontend" },
-                    { "label": "Agile SCRUM" },
-                    { "label": "MCP", "variant": "green" }
-                  ]
-                },
-                {
-                  "title": "Developpeur FullStack React - Node.js TS",
-                  "period": "Avr 2022 - Mar 2024",
-                  "company": "Talan Tunisia - BPI France Digital Hub",
-                  "bullets": [
-                    "Developpement de workflows d'onboarding de startups et de synchronisation de donnees integres a Dealroom et Intercom.",
-                    "Implementation de l'indexation full-text et optimisation de la recherche avec Algolia.",
-                    "Amelioration du SEO et des performances frontend grace a des optimisations Lighthouse.",
-                    "Developpement de fonctionnalites frontend et backend scalables avec React, Node.js et GraphQL.",
-                    "Collaboration au sein d'equipes organisees selon le framework SAFe avec participation aux PI Planning, synchronisations inter-equipes et cycles de livraison Agile a grande echelle."
-                  ],
-                  "tags": [
-                    { "label": "React" },
-                    { "label": "TypeScript" },
-                    { "label": "Node.js" },
-                    { "label": "GraphQL" },
-                    { "label": "PostgreSQL" },
-                    { "label": "Algolia" },
-                    { "label": "GitLab" },
-                    { "label": "JIRA" },
-                    { "label": "SAFe" }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        "icon": "location",
+        "label": "Adresse",
+        "value": "Tunis, Tunisie"
       },
       {
-        "sidebar": [
-          {
-            "type": "skillGroups",
-            "title": "Competences Techniques",
-            "groups": [
-              {
-                "title": "IA & Outillage Developpeur",
-                "items": [
-                  { "label": "MCP", "variant": "gold" },
-                  { "label": "GitHub Copilot", "variant": "gold" },
-                  { "label": "Ollama", "variant": "gold" },
-                  { "label": "LLMs", "variant": "gold" },
-                  { "label": "Prompt Engineering", "variant": "gold" }
-                ]
-              },
-              {
-                "title": "Architecture & DevOps",
-                "items": [
-                  { "label": "Micro-Frontend" },
-                  { "label": "Azure DevOps" },
-                  { "label": "CI/CD" },
-                  { "label": "Git" }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "education",
-            "title": "Formation",
-            "degree": "Master en Informatique",
-            "details": "Faculte des Sciences de Tunis - 2018"
-          },
-          {
-            "type": "languages",
-            "title": "Langues",
-            "items": [
-              { "name": "Arabe", "level": "Langue maternelle" },
-              { "name": "Francais", "level": "Courant" },
-              { "name": "Anglais", "level": "Courant" }
-            ]
-          }
-        ],
-        "main": {
-          "sections": [
-            {
-              "type": "experience",
-              "title": "Experience Professionnelle",
-              "items": [
-                {
-                  "title": "Developpeur React",
-                  "period": "Dec 2020 - Mar 2022",
-                  "company": "ANAVA - Plateforme de Coworking NJANO",
-                  "bullets": [
-                    "Developpement d'interfaces de gestion pour espaces de coworking, reservations, reclamations et systemes d'onboarding.",
-                    "Creation de tableaux de bord et de workflows utilisateurs avec React, Redux et Ant Design.",
-                    "Implementation d'experiences d'onboarding et de systemes de guidage interactif pour les utilisateurs de la plateforme."
-                  ],
-                  "tags": [
-                    { "label": "React" },
-                    { "label": "Redux" },
-                    { "label": "Ant Design" },
-                    { "label": "Jest" },
-                    { "label": "SCRUM" }
-                  ]
-                },
-                {
-                  "title": "Developpeur React Native",
-                  "period": "Fev 2020 - Dec 2020",
-                  "company": "Futura - Application Mobile Employes Monshaat",
-                  "bullets": [
-                    "Developpement d'applications mobiles de gestion des employes pour les demandes de conges, le teletravail et les workflows internes.",
-                    "Implementation de notifications en temps reel et de fonctionnalites de messagerie avec Firebase Cloud Messaging.",
-                    "Creation de composants UI mobiles responsifs et reutilisables avec React Native et Redux."
-                  ],
-                  "tags": [
-                    { "label": "React Native" },
-                    { "label": "Redux" },
-                    { "label": "Firebase FCM" },
-                    { "label": "Developpement Mobile" }
-                  ]
-                },
-                {
-                  "title": "Developpeur Web FullStack",
-                  "period": "Juin 2018 - Jan 2020",
-                  "company": "IDAF - MKC",
-                  "bullets": [
-                    "Creation de plateformes de communication pour influenceurs et de systemes de gestion de formations avec React et Node.js.",
-                    "Developpement de plateformes de dematerialisation et de validation de dossiers candidats pour des workflows administratifs.",
-                    "Implementation d'APIs backend et d'integrations de bases de donnees avec MongoDB et MySQL."
-                  ],
-                  "tags": [
-                    { "label": "React" },
-                    { "label": "Node.js" },
-                    { "label": "MongoDB" },
-                    { "label": "MySQL" },
-                    { "label": "Bootstrap" }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        "icon": "phone",
+        "label": "Téléphone",
+        "value": "+216 95 360 709",
+        "href": "tel:+21695360709"
+      },
+      {
+        "icon": "email",
+        "label": "Courriel",
+        "value": "aymenamaraa@gmail.com",
+        "href": "mailto:aymenamaraa@gmail.com"
+      },
+      {
+        "icon": "nationality",
+        "label": "Nationalité",
+        "value": "Tunisienne"
       }
-    ]
+    ],
+    "summary": "Développeur FullStack JavaScript/TypeScript Senior avec plus de 7 ans d'expérience dans la conception d'applications web scalables, de plateformes React enterprise et d'architectures micro-frontend. Développeur orienté frontend avec une solide expertise backend en Node.js, APIs et outillage développeur. Utilisateur quotidien de workflows d'ingénierie assistés par IA tirant parti des serveurs MCP et de GitHub Copilot Agent mode pour accélérer les tests, le débogage, la qualité du code et la livraison continue.",
+    "expertise": [
+      { "label": "FullStack TypeScript" },
+      { "label": "Écosystème React" },
+      { "label": "APIs Node.js" },
+      { "label": "Micro-Frontend" },
+      { "label": "Développement Augmenté IA", "variant": "gold" },
+      { "label": "Serveurs MCP", "variant": "gold" }
+    ],
+    "digitalSkills": [
+      {
+        "title": "Frontend & Interfaces Web",
+        "items": [
+          { "label": "React" },
+          { "label": "TypeScript" },
+          { "label": "Redux Toolkit" },
+          { "label": "MUI" },
+          { "label": "Ant Design" },
+          { "label": "Vite" },
+          { "label": "React Native" }
+        ]
+      },
+      {
+        "title": "Backend, APIs & Données",
+        "items": [
+          { "label": "Node.js" },
+          { "label": "Express.js" },
+          { "label": "GraphQL" },
+          { "label": "REST APIs" },
+          { "label": "Authentification" }
+        ]
+      },
+      {
+        "title": "IA & Outillage Développeur",
+        "items": [
+          { "label": "MCP", "variant": "gold" },
+          { "label": "GitHub Copilot", "variant": "gold" },
+          { "label": "Ollama", "variant": "gold" },
+          { "label": "LLMs", "variant": "gold" },
+          { "label": "Prompt Engineering", "variant": "gold" }
+        ]
+      },
+      {
+        "title": "Architecture & DevOps",
+        "items": [
+          { "label": "Micro-Frontend" },
+          { "label": "Azure DevOps" },
+          { "label": "CI/CD" },
+          { "label": "Git" }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "title": "Développeur Senior React TypeScript",
+        "period": "04/2024 – Présent",
+        "company": "Talan Tunisia - Groupe Eiffage",
+        "location": "Tunis, Tunisie",
+        "bullets": [
+          "Référent technique et contributeur architecture sur plusieurs workstreams au sein d'une plateforme monorepo micro-frontend.",
+          "Pilotage du déploiement de l'infrastructure de tests Vitest sur les micro-frontends avec des standards réutilisables et des workflows assistés par IA.",
+          "Développement de modules métier avancés incluant des grilles de données, des interfaces tri-vue et des systèmes de planification Gantt.",
+          "Conduite des revues de code et accompagnement des équipes sur les standards React/TypeScript, les bonnes pratiques d'architecture micro-frontend et l'amélioration continue de la qualité logicielle.",
+          "Création de prompts avancés pour agents IA et de pipelines de revue automatisés de code assistés par MCP pour améliorer la qualité du code et accélérer les revues de merge requests.",
+          "Encadrement et onboarding des nouveaux développeurs avec mise en place de guidelines techniques, sessions de mentoring et accélération de la montée en compétence sur l'écosystème frontend et les workflows engineering assistés par IA.",
+          "Participation active aux cérémonies Agile/Scrum (daily meetings, refinement, sprint planning, reviews et rétrospectives)."
+        ],
+        "tags": [
+          { "label": "React" },
+          { "label": "TypeScript" },
+          { "label": "Redux Toolkit" },
+          { "label": "Node.js" },
+          { "label": "Vitest" },
+          { "label": "Azure DevOps" },
+          { "label": "GitLab" },
+          { "label": "Micro-Frontend" },
+          { "label": "Agile SCRUM" },
+          { "label": "MCP", "variant": "green" }
+        ]
+      },
+      {
+        "title": "Développeur FullStack React - Node.js TS",
+        "period": "04/2022 – 03/2024",
+        "company": "Talan Tunisia - BPI France Digital Hub",
+        "location": "Tunis, Tunisie",
+        "bullets": [
+          "Développement de workflows d'onboarding de startups et de synchronisation de données intégrés à Dealroom et Intercom.",
+          "Implémentation de l'indexation full-text et optimisation de la recherche avec Algolia.",
+          "Amélioration du SEO et des performances frontend grâce à des optimisations Lighthouse.",
+          "Développement de fonctionnalités frontend et backend scalables avec React, Node.js et GraphQL.",
+          "Collaboration au sein d'équipes organisées selon le framework SAFe avec participation aux PI Planning, synchronisations inter-équipes et cycles de livraison Agile à grande échelle."
+        ],
+        "tags": [
+          { "label": "React" },
+          { "label": "TypeScript" },
+          { "label": "Node.js" },
+          { "label": "GraphQL" },
+          { "label": "PostgreSQL" },
+          { "label": "Algolia" },
+          { "label": "GitLab" },
+          { "label": "JIRA" },
+          { "label": "SAFe" }
+        ]
+      },
+      {
+        "title": "Développeur React",
+        "period": "12/2020 – 03/2022",
+        "company": "ANAVA - Plateforme de Coworking NJANO",
+        "location": "Tunis, Tunisie",
+        "bullets": [
+          "Développement d'interfaces de gestion pour espaces de coworking, réservations, réclamations et systèmes d'onboarding.",
+          "Création de tableaux de bord et de workflows utilisateurs avec React, Redux et Ant Design.",
+          "Implémentation d'expériences d'onboarding et de systèmes de guidage interactif pour les utilisateurs de la plateforme."
+        ],
+        "tags": [
+          { "label": "React" },
+          { "label": "Redux" },
+          { "label": "Ant Design" },
+          { "label": "Jest" },
+          { "label": "SCRUM" }
+        ]
+      },
+      {
+        "title": "Développeur React Native",
+        "period": "02/2020 – 12/2020",
+        "company": "Futura - Application Mobile Employés Monshaat",
+        "location": "Tunis, Tunisie",
+        "bullets": [
+          "Développement d'applications mobiles de gestion des employés pour les demandes de congés, le télétravail et les workflows internes.",
+          "Implémentation de notifications en temps réel et de fonctionnalités de messagerie avec Firebase Cloud Messaging.",
+          "Création de composants UI mobiles responsifs et réutilisables avec React Native et Redux."
+        ],
+        "tags": [
+          { "label": "React Native" },
+          { "label": "Redux" },
+          { "label": "Firebase FCM" },
+          { "label": "Développement Mobile" }
+        ]
+      },
+      {
+        "title": "Développeur Web FullStack",
+        "period": "06/2018 – 01/2020",
+        "company": "IDAF - MKC",
+        "location": "Tunis, Tunisie",
+        "bullets": [
+          "Création de plateformes de communication pour influenceurs et de systèmes de gestion de formations avec React et Node.js.",
+          "Développement de plateformes de dématérialisation et de validation de dossiers candidats pour des workflows administratifs.",
+          "Implémentation d'APIs backend et d'intégrations de bases de données avec MongoDB et MySQL."
+        ],
+        "tags": [
+          { "label": "React" },
+          { "label": "Node.js" },
+          { "label": "MongoDB" },
+          { "label": "MySQL" },
+          { "label": "Bootstrap" }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Éducation et Formation",
+        "degree": "Master en Informatique",
+        "institution": "Faculté des Sciences de Tunis",
+        "location": "Tunis, Tunisie",
+        "period": "09/2016 – 06/2018",
+        "eqfLevel": "Niveau 7 CEC (Cadre européen des certifications)",
+        "details": "Faculté des Sciences de Tunis - Diplômé en 2018"
+      }
+    ],
+    "languages": {
+      "motherTongue": {
+        "name": "Arabe",
+        "level": "Langue maternelle"
+      },
+      "otherLanguages": [
+        {
+          "name": "Français",
+          "listening": "C2",
+          "reading": "C2",
+          "spokenInteraction": "C2",
+          "spokenProduction": "C2",
+          "writing": "C2",
+          "overall": "C2",
+          "label": "Utilisateur expérimenté"
+        },
+        {
+          "name": "Anglais",
+          "listening": "C1",
+          "reading": "C1",
+          "spokenInteraction": "C1",
+          "spokenProduction": "C1",
+          "writing": "C1",
+          "overall": "C1",
+          "label": "Utilisateur expérimenté"
+        }
+      ]
+    }
   },
   "en": {
     "ui": {
       "languageLabel": "Language",
       "languageNames": {
-        "fr": "Francais",
+        "fr": "Français",
         "en": "English"
       },
+      "europassTitle": "Europass Curriculum Vitae",
       "infoButton": "Info",
-      "infoDialogTitle": "data.json documentation",
+      "infoDialogTitle": "Europass Format Documentation (data.json)",
       "closeInfo": "Close",
-      "printButton": "Export as PDF",
-      "loading": "Loading resume content...",
+      "printButton": "Download as PDF / Print",
+      "loading": "Loading Europass CV...",
       "loadErrorTitle": "Unable to load data.json",
-      "loadErrorMessage": "Check public/data.json: the file must be valid JSON with fr and en keys."
+      "loadErrorMessage": "Check public/data.json: the file must be valid JSON with fr and en keys.",
+      "summaryTitle": "Professional Summary",
+      "expertiseTitle": "Areas of Expertise",
+      "digitalSkillsTitle": "Digital Skills",
+      "experienceTitle": "Work Experience",
+      "educationTitle": "Education and Training",
+      "languagesTitle": "Language Skills",
+      "motherTongueLabel": "Mother tongue(s)",
+      "otherLanguagesLabel": "Other language(s)",
+      "cefrGridTitle": "Self-assessment of language skills (CEFR)",
+      "cefrHeaders": {
+        "understanding": "Understanding",
+        "listening": "Listening",
+        "reading": "Reading",
+        "speaking": "Speaking",
+        "interaction": "Spoken interaction",
+        "production": "Spoken production",
+        "writing": "Writing"
+      },
+      "cefrScale": "Levels: A1 and A2: Basic user — B1 and B2: Independent user — C1 and C2: Proficient user"
     },
     "seo": {
-      "title": "Aymen AMARA - FullStack JS/TS Developer"
+      "title": "Aymen AMARA - Europass Curriculum Vitae"
     },
     "person": {
+      "firstName": "Aymen",
+      "lastName": "AMARA",
       "nameLines": ["Aymen", "AMARA"],
       "role": "FullStack JS/TS Developer",
-      "photo": "circle-profile.png",
-      "photoAlt": "Portrait of Aymen Amara"
+      "photo": "profile-portrait.png",
+      "photoAlt": "Portrait of Aymen Amara",
+      "nationality": "Tunisian"
     },
-    "pages": [
+    "contact": [
       {
-        "sidebar": [
-          {
-            "type": "identity"
-          },
-          {
-            "type": "contact",
-            "title": "Contact",
-            "items": [
-              {
-                "icon": "email",
-                "label": "Email",
-                "value": "aymenamaraa@gmail.com",
-                "href": "mailto:aymenamaraa@gmail.com"
-              },
-              {
-                "icon": "phone",
-                "label": "Phone",
-                "value": "+216 95 360 709",
-                "href": "tel:+21695360709"
-              },
-              {
-                "icon": "location",
-                "label": "Location",
-                "value": "Tunis, Tunisia"
-              }
-            ]
-          },
-          {
-            "type": "tagList",
-            "title": "Areas of Expertise",
-            "items": [
-              { "label": "FullStack TypeScript" },
-              { "label": "React Ecosystem" },
-              { "label": "Node.js APIs" },
-              { "label": "Micro-Frontend" },
-              { "label": "AI-Augmented Development", "variant": "gold" },
-              { "label": "MCP", "variant": "gold" }
-            ]
-          },
-          {
-            "type": "skillGroups",
-            "title": "Technical Skills",
-            "groups": [
-              {
-                "title": "Frontend",
-                "items": [
-                  { "label": "React" },
-                  { "label": "TypeScript" },
-                  { "label": "Redux Toolkit" },
-                  { "label": "MUI" },
-                  { "label": "Ant Design" },
-                  { "label": "Vite" },
-                  { "label": "React Native" }
-                ]
-              },
-              {
-                "title": "Backend & APIs",
-                "items": [
-                  { "label": "Node.js" },
-                  { "label": "Express.js" },
-                  { "label": "GraphQL" },
-                  { "label": "REST APIs" },
-                  { "label": "Authentication" }
-                ]
-              }
-            ]
-          }
-        ],
-        "main": {
-          "role": "FullStack JS/TS Developer",
-          "summary": "Senior JavaScript/TypeScript FullStack Developer with more than 7 years of experience designing scalable web applications, enterprise React platforms, and micro-frontend architectures. Frontend-oriented developer with strong backend expertise in Node.js, APIs, and developer tooling. Daily user of AI-assisted engineering workflows leveraging MCP servers and GitHub Copilot Agent mode to accelerate testing, debugging, code quality, and delivery.",
-          "sections": [
-            {
-              "type": "experience",
-              "title": "Professional Experience",
-              "items": [
-                {
-                  "title": "Senior React TypeScript Developer",
-                  "period": "Apr 2024 - Present",
-                  "company": "Talan Tunisia - Groupe Eiffage",
-                  "bullets": [
-                    "Technical lead and architecture contributor across several workstreams within a micro-frontend monorepo platform.",
-                    "Led the rollout of the Vitest testing infrastructure across micro-frontends with reusable standards and AI-assisted workflows.",
-                    "Developed advanced business modules including data grids, tri-view interfaces, and Gantt planning systems.",
-                    "Conducted code reviews and coached teams on React/TypeScript standards, micro-frontend architecture best practices, and continuous software quality improvement.",
-                    "Created advanced prompts for AI agents and MCP-assisted automated code review pipelines to improve code quality and speed up merge request reviews.",
-                    "Mentored and onboarded new developers by establishing technical guidelines, running mentoring sessions, and accelerating ramp-up across the frontend ecosystem and AI-assisted engineering workflows.",
-                    "Actively participated in Agile/Scrum ceremonies including daily meetings, refinement sessions, sprint planning, reviews, and retrospectives."
-                  ],
-                  "tags": [
-                    { "label": "React" },
-                    { "label": "TypeScript" },
-                    { "label": "Redux Toolkit" },
-                    { "label": "Node.js" },
-                    { "label": "Vitest" },
-                    { "label": "Azure DevOps" },
-                    { "label": "GitLab" },
-                    { "label": "Micro-Frontend" },
-                    { "label": "Agile SCRUM" },
-                    { "label": "MCP", "variant": "green" }
-                  ]
-                },
-                {
-                  "title": "FullStack React - Node.js TS Developer",
-                  "period": "Apr 2022 - Mar 2024",
-                  "company": "Talan Tunisia - BPI France Digital Hub",
-                  "bullets": [
-                    "Developed startup onboarding and data synchronization workflows integrated with Dealroom and Intercom.",
-                    "Implemented full-text indexing and search optimization with Algolia.",
-                    "Improved SEO and frontend performance through Lighthouse optimizations.",
-                    "Developed scalable frontend and backend features with React, Node.js, and GraphQL.",
-                    "Collaborated within SAFe-organized teams, contributing to PI Planning, cross-team synchronization, and large-scale Agile delivery cycles."
-                  ],
-                  "tags": [
-                    { "label": "React" },
-                    { "label": "TypeScript" },
-                    { "label": "Node.js" },
-                    { "label": "GraphQL" },
-                    { "label": "PostgreSQL" },
-                    { "label": "Algolia" },
-                    { "label": "GitLab" },
-                    { "label": "JIRA" },
-                    { "label": "SAFe" }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        "icon": "location",
+        "label": "Address",
+        "value": "Tunis, Tunisia"
       },
       {
-        "sidebar": [
-          {
-            "type": "skillGroups",
-            "title": "Technical Skills",
-            "groups": [
-              {
-                "title": "AI & Developer Tooling",
-                "items": [
-                  { "label": "MCP", "variant": "gold" },
-                  { "label": "GitHub Copilot", "variant": "gold" },
-                  { "label": "Ollama", "variant": "gold" },
-                  { "label": "LLMs", "variant": "gold" },
-                  { "label": "Prompt Engineering", "variant": "gold" }
-                ]
-              },
-              {
-                "title": "Architecture & DevOps",
-                "items": [
-                  { "label": "Micro-Frontend" },
-                  { "label": "Azure DevOps" },
-                  { "label": "CI/CD" },
-                  { "label": "Git" }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "education",
-            "title": "Education",
-            "degree": "Master's in Computer Science",
-            "details": "Faculty of Sciences of Tunis - 2018"
-          },
-          {
-            "type": "languages",
-            "title": "Languages",
-            "items": [
-              { "name": "Arabic", "level": "Native" },
-              { "name": "French", "level": "Fluent" },
-              { "name": "English", "level": "Fluent" }
-            ]
-          }
-        ],
-        "main": {
-          "sections": [
-            {
-              "type": "experience",
-              "title": "Professional Experience",
-              "items": [
-                {
-                  "title": "React Developer",
-                  "period": "Dec 2020 - Mar 2022",
-                  "company": "ANAVA - NJANO Coworking Platform",
-                  "bullets": [
-                    "Developed management interfaces for coworking spaces, bookings, claims, and onboarding systems.",
-                    "Built dashboards and user workflows with React, Redux, and Ant Design.",
-                    "Implemented onboarding experiences and interactive guidance systems for platform users."
-                  ],
-                  "tags": [
-                    { "label": "React" },
-                    { "label": "Redux" },
-                    { "label": "Ant Design" },
-                    { "label": "Jest" },
-                    { "label": "SCRUM" }
-                  ]
-                },
-                {
-                  "title": "React Native Developer",
-                  "period": "Feb 2020 - Dec 2020",
-                  "company": "Futura - Monshaat Employee Mobile Application",
-                  "bullets": [
-                    "Developed employee management mobile applications for leave requests, remote work, and internal workflows.",
-                    "Implemented real-time notifications and messaging features with Firebase Cloud Messaging.",
-                    "Created responsive, reusable mobile UI components with React Native and Redux."
-                  ],
-                  "tags": [
-                    { "label": "React Native" },
-                    { "label": "Redux" },
-                    { "label": "Firebase FCM" },
-                    { "label": "Mobile Development" }
-                  ]
-                },
-                {
-                  "title": "FullStack Web Developer",
-                  "period": "Jun 2018 - Jan 2020",
-                  "company": "IDAF - MKC",
-                  "bullets": [
-                    "Built communication platforms for influencers and training management systems with React and Node.js.",
-                    "Developed digitization platforms and candidate file validation systems for administrative workflows.",
-                    "Implemented backend APIs and database integrations with MongoDB and MySQL."
-                  ],
-                  "tags": [
-                    { "label": "React" },
-                    { "label": "Node.js" },
-                    { "label": "MongoDB" },
-                    { "label": "MySQL" },
-                    { "label": "Bootstrap" }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        "icon": "phone",
+        "label": "Phone",
+        "value": "+216 95 360 709",
+        "href": "tel:+21695360709"
+      },
+      {
+        "icon": "email",
+        "label": "Email",
+        "value": "aymenamaraa@gmail.com",
+        "href": "mailto:aymenamaraa@gmail.com"
+      },
+      {
+        "icon": "nationality",
+        "label": "Nationality",
+        "value": "Tunisian"
       }
-    ]
+    ],
+    "summary": "Senior JavaScript/TypeScript FullStack Developer with more than 7 years of experience designing scalable web applications, enterprise React platforms, and micro-frontend architectures. Frontend-oriented developer with strong backend expertise in Node.js, APIs, and developer tooling. Daily user of AI-assisted engineering workflows leveraging MCP servers and GitHub Copilot Agent mode to accelerate testing, debugging, code quality, and continuous delivery.",
+    "expertise": [
+      { "label": "FullStack TypeScript" },
+      { "label": "React Ecosystem" },
+      { "label": "Node.js APIs" },
+      { "label": "Micro-Frontend" },
+      { "label": "AI-Augmented Development", "variant": "gold" },
+      { "label": "MCP Servers", "variant": "gold" }
+    ],
+    "digitalSkills": [
+      {
+        "title": "Frontend & Web Interfaces",
+        "items": [
+          { "label": "React" },
+          { "label": "TypeScript" },
+          { "label": "Redux Toolkit" },
+          { "label": "MUI" },
+          { "label": "Ant Design" },
+          { "label": "Vite" },
+          { "label": "React Native" }
+        ]
+      },
+      {
+        "title": "Backend, APIs & Data",
+        "items": [
+          { "label": "Node.js" },
+          { "label": "Express.js" },
+          { "label": "GraphQL" },
+          { "label": "REST APIs" },
+          { "label": "Authentication" }
+        ]
+      },
+      {
+        "title": "AI & Developer Tooling",
+        "items": [
+          { "label": "MCP", "variant": "gold" },
+          { "label": "GitHub Copilot", "variant": "gold" },
+          { "label": "Ollama", "variant": "gold" },
+          { "label": "LLMs", "variant": "gold" },
+          { "label": "Prompt Engineering", "variant": "gold" }
+        ]
+      },
+      {
+        "title": "Architecture & DevOps",
+        "items": [
+          { "label": "Micro-Frontend" },
+          { "label": "Azure DevOps" },
+          { "label": "CI/CD" },
+          { "label": "Git" }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "title": "Senior React TypeScript Developer",
+        "period": "04/2024 – Present",
+        "company": "Talan Tunisia - Groupe Eiffage",
+        "location": "Tunis, Tunisia",
+        "bullets": [
+          "Technical lead and architecture contributor across several workstreams within a micro-frontend monorepo platform.",
+          "Led the rollout of the Vitest testing infrastructure across micro-frontends with reusable standards and AI-assisted workflows.",
+          "Developed advanced business modules including data grids, tri-view interfaces, and Gantt planning systems.",
+          "Conducted code reviews and coached teams on React/TypeScript standards, micro-frontend architecture best practices, and continuous software quality improvement.",
+          "Created advanced prompts for AI agents and MCP-assisted automated code review pipelines to improve code quality and speed up merge request reviews.",
+          "Mentored and onboarded new developers by establishing technical guidelines, running mentoring sessions, and accelerating ramp-up across the frontend ecosystem and AI-assisted engineering workflows.",
+          "Actively participated in Agile/Scrum ceremonies including daily meetings, refinement sessions, sprint planning, reviews, and retrospectives."
+        ],
+        "tags": [
+          { "label": "React" },
+          { "label": "TypeScript" },
+          { "label": "Redux Toolkit" },
+          { "label": "Node.js" },
+          { "label": "Vitest" },
+          { "label": "Azure DevOps" },
+          { "label": "GitLab" },
+          { "label": "Micro-Frontend" },
+          { "label": "Agile SCRUM" },
+          { "label": "MCP", "variant": "green" }
+        ]
+      },
+      {
+        "title": "FullStack React - Node.js TS Developer",
+        "period": "04/2022 – 03/2024",
+        "company": "Talan Tunisia - BPI France Digital Hub",
+        "location": "Tunis, Tunisia",
+        "bullets": [
+          "Developed startup onboarding and data synchronization workflows integrated with Dealroom and Intercom.",
+          "Implemented full-text indexing and search optimization with Algolia.",
+          "Improved SEO and frontend performance through Lighthouse optimizations.",
+          "Developed scalable frontend and backend features with React, Node.js, and GraphQL.",
+          "Collaborated within SAFe-organized teams, contributing to PI Planning, cross-team synchronization, and large-scale Agile delivery cycles."
+        ],
+        "tags": [
+          { "label": "React" },
+          { "label": "TypeScript" },
+          { "label": "Node.js" },
+          { "label": "GraphQL" },
+          { "label": "PostgreSQL" },
+          { "label": "Algolia" },
+          { "label": "GitLab" },
+          { "label": "JIRA" },
+          { "label": "SAFe" }
+        ]
+      },
+      {
+        "title": "React Developer",
+        "period": "12/2020 – 03/2022",
+        "company": "ANAVA - NJANO Coworking Platform",
+        "location": "Tunis, Tunisia",
+        "bullets": [
+          "Developed management interfaces for coworking spaces, bookings, claims, and onboarding systems.",
+          "Built dashboards and user workflows with React, Redux, and Ant Design.",
+          "Implemented onboarding experiences and interactive guidance systems for platform users."
+        ],
+        "tags": [
+          { "label": "React" },
+          { "label": "Redux" },
+          { "label": "Ant Design" },
+          { "label": "Jest" },
+          { "label": "SCRUM" }
+        ]
+      },
+      {
+        "title": "React Native Developer",
+        "period": "02/2020 – 12/2020",
+        "company": "Futura - Monshaat Employee Mobile Application",
+        "location": "Tunis, Tunisia",
+        "bullets": [
+          "Developed employee management mobile applications for leave requests, remote work, and internal workflows.",
+          "Implemented real-time notifications and messaging features with Firebase Cloud Messaging.",
+          "Created responsive, reusable mobile UI components with React Native and Redux."
+        ],
+        "tags": [
+          { "label": "React Native" },
+          { "label": "Redux" },
+          { "label": "Firebase FCM" },
+          { "label": "Mobile Development" }
+        ]
+      },
+      {
+        "title": "FullStack Web Developer",
+        "period": "06/2018 – 01/2020",
+        "company": "IDAF - MKC",
+        "location": "Tunis, Tunisia",
+        "bullets": [
+          "Built communication platforms for influencers and training management systems with React and Node.js.",
+          "Developed digitization platforms and candidate file validation systems for administrative workflows.",
+          "Implemented backend APIs and database integrations with MongoDB and MySQL."
+        ],
+        "tags": [
+          { "label": "React" },
+          { "label": "Node.js" },
+          { "label": "MongoDB" },
+          { "label": "MySQL" },
+          { "label": "Bootstrap" }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Education and Training",
+        "degree": "Master's Degree in Computer Science",
+        "institution": "Faculty of Sciences of Tunis",
+        "location": "Tunis, Tunisia",
+        "period": "09/2016 – 06/2018",
+        "eqfLevel": "EQF Level 7 (European Qualifications Framework)",
+        "details": "Faculty of Sciences of Tunis - Graduated in 2018"
+      }
+    ],
+    "languages": {
+      "motherTongue": {
+        "name": "Arabic",
+        "level": "Mother tongue"
+      },
+      "otherLanguages": [
+        {
+          "name": "French",
+          "listening": "C2",
+          "reading": "C2",
+          "spokenInteraction": "C2",
+          "spokenProduction": "C2",
+          "writing": "C2",
+          "overall": "C2",
+          "label": "Proficient user"
+        },
+        {
+          "name": "English",
+          "listening": "C1",
+          "reading": "C1",
+          "spokenInteraction": "C1",
+          "spokenProduction": "C1",
+          "writing": "C1",
+          "overall": "C1",
+          "label": "Proficient user"
+        }
+      ]
+    }
   }
 }

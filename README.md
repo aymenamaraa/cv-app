@@ -1,6 +1,6 @@
 # aymenamaraa.github.io
 
-React CV application powered by Vite. The editable source lives in `app/`, and the visible CV content is loaded from `public/data.json` so the French and English versions can be updated from one structured file.
+Official **Europass Curriculum Vitae** web application powered by React and Vite. The editable source lives in `app/`, and the visible CV content is loaded from `public/data.json` conforming to European Commission Europass standards (including the CEFR language self-assessment grid, EQF level, and categorized digital competencies). Both French and English versions can be updated from one structured file.
 
 ## Local development
 
@@ -85,37 +85,19 @@ Important JSON rules:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| `ui` | object | Labels used by the header, popup, loading state, error state, and print button. |
+| `ui` | object | Labels used by the Europass header, popup, loading state, error state, and print button. |
 | `seo` | object | Browser metadata. Currently uses `title` for `document.title`. |
-| `person` | object | Shared identity data used by the header and identity sidebar block. |
+| `person` | object | Shared identity data used by the header banner and contact section. |
 | `pages` | array | Ordered list of rendered CV pages. The array order is also the print order. |
-
-### `ui`
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| `languageLabel` | string | Label displayed beside the language selector. |
-| `languageNames` | object | Maps `fr` and `en` to the option labels displayed in the selector. |
-| `infoButton` | string | Text displayed on the header button that opens the documentation popup. |
-| `infoDialogTitle` | string | Heading displayed at the top of the popup. |
-| `closeInfo` | string | Accessible label and visible meaning for closing the popup. |
-| `printButton` | string | Text displayed on the PDF/export button. |
-| `loading` | string | Message reserved for loading states. |
-| `loadErrorTitle` | string | Error title if `data.json` cannot be loaded or parsed. |
-| `loadErrorMessage` | string | Detailed recovery message displayed under the error title. |
-
-### `seo`
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| `title` | string | Browser tab title for the selected language. |
 
 ### `person`
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| `nameLines` | array of strings | Name lines rendered in the sidebar. Use `['Aymen', 'AMARA']` to keep the same two-line layout. |
-| `role` | string | Role shown in the header and reusable in page main content. |
+| `firstName` | string | Candidate first name (e.g. `Aymen`). |
+| `lastName` | string | Candidate family name in uppercase (e.g. `AMARA`). |
+| `role` | string | Occupation / Target role shown in header and main content. |
+| `nationality` | string | Standard European nationality field (e.g. `Tunisienne` / `Tunisian`). |
 | `photo` | string | Image file path relative to `public/`. Example: `circle-profile.png`. |
 | `photoAlt` | string | Accessible image description. Translate this per language. |
 
@@ -128,7 +110,7 @@ Each page object renders one CV page:
 | `sidebar` | array | Ordered sidebar sections. |
 | `main` | object | Main page content containing optional role, summary, and sections. |
 
-To add a third printed page, append another object to `pages`. To reorder pages, move the objects inside the array.
+To add another printed page, append an object to `pages`. To reorder pages, move the objects inside the array.
 
 ### Sidebar section types
 
@@ -136,12 +118,12 @@ Every sidebar section has a `type`. Supported values are:
 
 | Type | Required attributes | Description |
 | --- | --- | --- |
-| `identity` | none | Renders `person.photo`, `person.photoAlt`, and `person.nameLines`. |
-| `contact` | `title`, `items` | Renders contact rows. |
-| `tagList` | `title`, `items` | Renders compact tags such as expertise areas. |
-| `skillGroups` | `title`, `groups` | Renders grouped technical skills. |
-| `education` | `title`, `degree`, `details` | Renders a single education block. |
-| `languages` | `title`, `items` | Renders language proficiency rows. |
+| `identity` | none | Renders in the top Europass banner on page 1. |
+| `contact` | `title`, `items` | Renders contact information with official Europass SVG icons. |
+| `tagList` | `title`, `items` | Renders compact tags such as areas of expertise. |
+| `skillGroups` | `title`, `groups` | Renders grouped digital competencies. |
+| `education` | `title`, `degree`, `institution`, `period`, `eqfLevel` | Renders education and training with European Qualifications Framework (EQF) level. |
+| `cefrLanguages` | `title`, `motherTongue`, `otherLanguages` | Renders the official Europass CEFR language self-assessment matrix. |
 
 Contact item attributes:
 
