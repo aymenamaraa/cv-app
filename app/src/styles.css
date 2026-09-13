@@ -1226,7 +1226,7 @@ a:hover {
     padding: 0 !important;
     margin: 0 !important;
     color: var(--eu-ink) !important;
-    font-size: 10pt;
+    font-size: 9.5pt;
   }
 
   .app-shell {
@@ -1250,71 +1250,277 @@ a:hover {
     border-radius: 0 !important;
     box-shadow: none !important;
     max-width: 100% !important;
+    display: block !important;
   }
 
+  /* Header (Page 1 Top) */
   .eu-cv-header {
-    padding: 20px 24px 16px !important;
+    padding: 16px 20px 14px !important;
+    background: linear-gradient(180deg, #ffffff 0%, var(--eu-light-blue) 100%) !important;
+    border-bottom: 2px solid var(--eu-border) !important;
+    border-top: 4px solid var(--eu-blue) !important;
   }
 
   .eu-cv-header-top {
-    margin-bottom: 12px !important;
-    padding-bottom: 8px !important;
+    display: none !important;
   }
 
   .europass-fullname {
-    font-size: 24px !important;
+    font-size: 22px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .europass-role-badge {
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .eu-contacts-grid {
+    gap: 5px 10px !important;
+  }
+
+  .contact-item-chip {
+    padding: 3px 8px !important;
+    font-size: 10.5px !important;
   }
 
   .eu-profile-photo {
-    width: 100px !important;
-    height: 100px !important;
+    width: 96px !important;
+    height: 96px !important;
+    border-radius: 6px !important;
+    border: 2px solid #ffffff !important;
+    outline: 1.5px solid var(--eu-blue) !important;
+    box-shadow: none !important;
+    object-fit: cover !important;
   }
 
+  /* Body & Flow */
   .eu-cv-body {
-    padding: 20px 24px !important;
-    gap: 20px !important;
+    padding: 16px 20px !important;
+    display: block !important;
   }
 
+  .eu-section {
+    display: block !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* Prevent Orphan Section Headings */
+  .eu-section-header,
+  h1, h2, h3, h4 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    padding-bottom: 5px !important;
+  }
+
+  .eu-section-title-text {
+    font-size: 13.5px !important;
+  }
+
+  .eu-summary-card {
+    padding: 10px 14px !important;
+  }
+
+  .summary-paragraph {
+    font-size: 11px !important;
+    line-height: 1.55 !important;
+  }
+
+  .expertise-tags-list {
+    gap: 5px !important;
+  }
+
+  .expertise-tag {
+    font-size: 10.5px !important;
+    padding: 3px 8px !important;
+  }
+
+  /* Digital Skills on Page 1 */
   .digital-skills-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    gap: 8px !important;
   }
 
   .digital-skill-card {
-    padding: 10px 12px !important;
+    padding: 8px 10px !important;
+    gap: 5px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 
-  .eu-timeline-item,
-  .digital-skill-card,
-  .education-card,
-  .mother-tongue-panel,
+  .skill-group-heading {
+    font-size: 10px !important;
+  }
+
+  .skill-tags-list {
+    gap: 4px !important;
+  }
+
+  .skill-tag {
+    font-size: 9.5px !important;
+    padding: 2px 6px !important;
+  }
+
+  /* ==========================================================
+     PAGE 2: WORK EXPERIENCE
+     Clean page-break so Work Experience starts at top of Page 2
+     ========================================================== */
+  .eu-work-experience-section {
+    break-before: page !important;
+    page-break-before: always !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .eu-timeline {
+    gap: 8px !important;
+    margin-top: 2px !important;
+  }
+
+  .eu-timeline-item {
+    padding-left: 18px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .eu-timeline-item::before {
+    left: 5px !important;
+    top: 5px !important;
+  }
+
+  .timeline-marker {
+    left: 0 !important;
+    top: 5px !important;
+    width: 11px !important;
+    height: 11px !important;
+    border-width: 2.5px !important;
+  }
+
+  .timeline-content {
+    gap: 3px !important;
+  }
+
+  .job-role-title {
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+  }
+
+  .job-company-title {
+    font-size: 11px !important;
+  }
+
+  .timeline-period-badge {
+    font-size: 10px !important;
+    padding: 1.5px 6px !important;
+  }
+
+  .timeline-bullet-list {
+    margin-top: 2px !important;
+    padding-left: 14px !important;
+    gap: 1.5px !important;
+  }
+
+  .timeline-bullet-list li {
+    font-size: 9.5px !important;
+    line-height: 1.38 !important;
+  }
+
+  .job-tech-tags {
+    gap: 3px !important;
+    margin-top: 2px !important;
+  }
+
+  .job-tech-tag {
+    font-size: 8.5px !important;
+    padding: 1.5px 5px !important;
+  }
+
+  /* ==========================================================
+     PAGE 3: EDUCATION AND TRAINING + LANGUAGE SKILLS
+     Clean page-break so Education starts at top of Page 3
+     ========================================================== */
+  .eu-education-section {
+    break-before: page !important;
+    page-break-before: always !important;
+    margin-top: 0 !important;
+  }
+
+  .education-card {
+    padding: 10px 14px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .edu-degree-title {
+    font-size: 13px !important;
+  }
+
+  .edu-org-name {
+    font-size: 11.5px !important;
+  }
+
+  .edu-period-pill {
+    font-size: 10px !important;
+    padding: 1.5px 6px !important;
+  }
+
+  .eqf-pill {
+    font-size: 9.5px !important;
+    padding: 2px 7px !important;
+  }
+
+  /* Languages Section directly on Page 3 */
+  .eu-languages-section {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-top: 14px !important;
+  }
+
+  .mother-tongue-panel {
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .mother-tongue-badge-label {
+    font-size: 10px !important;
+  }
+
+  .mother-tongue-val {
+    font-size: 11px !important;
+  }
+
+  .other-languages-panel {
+    margin-top: 8px !important;
+  }
+
   .cefr-table-card {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
 
-  .eu-timeline-item {
-    padding-left: 20px !important;
-  }
-
-  .job-role-title {
-    font-size: 13px !important;
-  }
-
-  .timeline-bullet-list li {
-    font-size: 11px !important;
-    line-height: 1.45 !important;
-  }
-
   .cefr-table th,
   .cefr-table td {
     padding: 4px 6px !important;
-    font-size: 9.5px !important;
+    font-size: 9px !important;
   }
 
-  .europass-single-column-footer {
-    padding: 10px 24px !important;
-    font-size: 9.5px !important;
+  .cefr-th-group {
+    font-size: 8.5px !important;
+    padding: 3px !important;
+  }
+
+  .cefr-th-sub {
+    font-size: 8px !important;
+    padding: 2.5px !important;
+  }
+
+  .cefr-footnote {
+    font-size: 8px !important;
+    padding: 5px 8px !important;
   }
 
   @page {

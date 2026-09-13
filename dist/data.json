@@ -42,7 +42,7 @@
       "lastName": "AMARA",
       "nameLines": ["Aymen", "AMARA"],
       "role": "Développeur FullStack JS/TS",
-      "photo": "profile-portrait.png",
+      "photo": "circle-profile.png",
       "photoAlt": "Portrait d'Aymen Amara",
       "nationality": "Tunisienne"
     },
@@ -311,7 +311,7 @@
       "lastName": "AMARA",
       "nameLines": ["Aymen", "AMARA"],
       "role": "FullStack JS/TS Developer",
-      "photo": "profile-portrait.png",
+      "photo": "circle-profile.png",
       "photoAlt": "Portrait of Aymen Amara",
       "nationality": "Tunisian"
     },
